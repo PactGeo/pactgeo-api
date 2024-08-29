@@ -1,0 +1,142 @@
+[
+    {
+        "title": "The Climate Crisis: A Point of No Return",
+        "description": "Climate change is affecting every corner of the planet, from ocean acidification to intensifying weather phenomena. Are we doing enough to reverse the damage, or have we passed the point of no return? This debate explores global policies and solutions to combat climate change.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Environment", "Politics", "Society"]
+    },
+    {
+        "title": "Economic Inequality: How to Bridge the Global Gap",
+        "description": "Economic inequality between and within countries continues to grow, leaving millions in extreme poverty while a small elite accumulates most of the world's wealth. This debate explores potential economic reforms to balance the scales.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Economy", "Work", "Society"]
+    },
+    {
+        "title": "Pandemics and Global Health: Preparing for the Next Crisis",
+        "description": "The COVID-19 pandemic exposed weaknesses in the global health system. How can we better prepare for future pandemics? This debate focuses on international collaboration, equitable vaccine access, and strengthening health systems.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Health", "Society", "Innovation"]
+    },
+    {
+        "title": "The Future of Education: Digitalization and Inequality",
+        "description": "The digitalization of education accelerated during the pandemic but also revealed a growing digital divide. This debate explores how to ensure equitable access to quality education in an increasingly digital world.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Education", "Technology", "Society"]
+    },
+    {
+        "title": "Freedom of Expression vs. Misinformation: How to Regulate Online Content",
+        "description": "Social media has amplified both citizen voices and the spread of misinformation. This debate seeks to balance freedom of expression with the need to regulate harmful content without censorship.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Technology", "Law and Legislation", "Culture"]
+    },
+    {
+        "title": "The Impact of Artificial Intelligence on the Labor Market",
+        "description": "AI is transforming the way we work, eliminating some jobs while creating new ones. How can we prepare for a fair and balanced transition? This debate addresses the challenges and opportunities AI represents for workers worldwide.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Innovation", "Work", "Technology"]
+    },
+    {
+        "title": "Migration Crisis: Seeking Global Solutions for Human Mobility",
+        "description": "Wars, climate change, and poverty are driving an unprecedented migration crisis. This debate focuses on how countries can collaborate to manage migration fairly and humanely.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Politics", "Rights and Justice", "Society"]
+    },
+    {
+        "title": "Cybersecurity and Privacy: Are We Really Protected?",
+        "description": "With the rise of cyberattacks, protecting data privacy is more critical than ever. This debate explores the policies and technologies needed to safeguard citizens in a digital world.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Security", "Technology", "Law and Legislation"]
+    },
+    {
+        "title": "Challenges to Democracy in the Age of Disinformation",
+        "description": "Democracies are being tested by disinformation and media manipulation. How can countries defend their democratic processes in such a volatile information environment?",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Politics", "Culture", "Society"]
+    },
+    {
+        "title": "The Rise of Authoritarianism: Is Global Freedom at Risk?",
+        "description": "Authoritarianism is on the rise in many countries, threatening human rights and civil liberties. This debate examines the causes and potential solutions to counter this global trend.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Rights and Justice", "Politics", "Society"]
+    },
+    {
+        "title": "Regulating Big Tech: Who Controls Technology?",
+        "description": "Big tech companies wield unprecedented power over information and markets. Should governments step in more, and if so, how? This debate examines the need for regulation of these tech giants.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Technology", "Law and Legislation", "Innovation"]
+    },
+    {
+        "title": "Future of Work: Adapting to an Automated World",
+        "description": "Automation is replacing traditional jobs, and it’s crucial to understand how governments and businesses can support workers through this transition.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Work", "Innovation", "Economy"]
+    },
+    {
+        "title": "Human Rights in Times of Crisis: Are They Respected?",
+        "description": "Political and economic crises often lead to human rights violations. This debate seeks solutions to protect basic rights, even in times of instability.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Rights and Justice", "Politics", "Society"]
+    },
+    {
+        "title": "The Future of Energy: Transition to Renewable",
+        "description": "Transitioning to renewable energy is vital to combat climate change. This debate analyzes how countries can speed up this transition and overcome political and economic obstacles.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Environment", "Economy", "Innovation"]
+    },
+    {
+        "title": "Sex Education: Rights and Challenges in the 21st Century",
+        "description": "Sex education remains a controversial topic in many parts of the world. This debate focuses on how to educate new generations about sexual health and rights effectively and respectfully.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Education", "Society", "Rights and Justice"]
+    },
+    {
+        "title": "Globalization and Culture: Are We Losing Our Roots?",
+        "description": "Globalization has connected the world but has also put local cultures at risk. This debate explores how to maintain cultural diversity in an increasingly homogeneous world.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Culture", "Society", "Economy"]
+    },
+    {
+        "title": "Gender Gap in the Workplace: What Needs to Be Done?",
+        "description": "Despite progress, the gender gap in employment and wages remains a significant issue. This debate explores the policies needed to achieve gender equality at work.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Work", "Rights and Justice", "Society"]
+    },
+    {
+        "title": "Food Security: The Challenge of Feeding the World",
+        "description": "With a growing population, food security has become a critical challenge. This debate examines how we can ensure access to sufficient and healthy food for everyone.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Health", "Environment", "Economy"]
+    },
+    {
+        "title": "The Role of the UN in the 21st Century: Reform or Replace?",
+        "description": "The effectiveness of the United Nations is being questioned more than ever. Is it time to reform the UN or seek alternatives that better respond to global challenges?",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Politics", "Law and Legislation", "Society"]
+    },
+    {
+        "title": "Ethical Dilemmas of Biotechnology: Genetic Modification and the Future of Humanity",
+        "description": "Biotechnology is advancing rapidly, allowing genetic modifications in plants, animals, and humans. This debate addresses the ethical dilemmas and regulations needed to handle these advances.",
+        "type": "global",
+        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
+        "tags": ["Innovation", "Health", "Law and Legislation"]
+    }
+]

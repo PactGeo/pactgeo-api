@@ -1,0 +1,56 @@
+[
+    {
+        "username": "sebacc",
+        "email": "sebastiancardoso92@gmail.com",
+        "full_name": "Sebastian Cardoso",
+        "role": "admin",
+        "is_active": true,
+        "image_url": "https://avatars.githubusercontent.com/u/1315101?v=4",
+        "birhdate": "1992-07-02"
+    },
+    {
+        "username": "dailentz",
+        "email": "dailentz@gmail.com",
+        "full_name": "Daiana Lentz",
+        "role": "admin",
+        "is_active": true,
+        "image_url": "https://avatars.githubusercontent.com/u/1315101?v=4",
+        "birhdate": "1990-01-27"
+    },
+    {
+        "username": "gustavocardoso",
+        "email": "jhon.gustavo.cardoso@gmail.com",
+        "full_name": "Gustavo Cardoso",
+        "role": "user",
+        "is_active": true,
+        "image_url": "https://avatars.githubusercontent.com/u/1315101?v=4",
+        "birhdate": "1966-02-12"
+    },
+    {
+        "username": "adrianacastillo",
+        "email": "maria.adriana.castillo.1966@gmail.com",
+        "full_name": "Adriana Castillo",
+        "role": "user",
+        "is_active": true,
+        "image_url": "https://avatars.githubusercontent.com/u/1315101?v=4",
+        "birhdate": "1966-06-01"
+    },
+    {
+        "username": "valeriacardoso",
+        "email": "valeriacardoso@gmail.com",
+        "full_name": "Valeria Cardoso",
+        "role": "user",
+        "is_active": true,
+        "image_url": "https://avatars.githubusercontent.com/u/1315101?v=4",
+        "birhdate": "1996-07-28"
+    },
+    {
+        "username": "cirocardoso",
+        "email": "cirocardoso@gmail.com",
+        "full_name": "Ciro Cardoso",
+        "role": "user",
+        "is_active": true,
+        "image_url": "https://avatars.githubusercontent.com/u/1315101?v=4",
+        "birhdate": "2022-11-23"
+    }
+]
