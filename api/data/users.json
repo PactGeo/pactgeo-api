@@ -1,56 +1,68 @@
 [
     {
-        "username": "sebacc",
+        "username": "sebacc92",
         "email": "sebastiancardoso92@gmail.com",
-        "full_name": "Sebastian Cardoso",
-        "role": "admin",
+        "emailVerified": true,
+        "name": "Sebastian Cardoso",
+        "role": "ADMIN",
         "is_active": true,
-        "image_url": "https://avatars.githubusercontent.com/u/1315101?v=4",
-        "birhdate": "1992-07-02"
+        "image": "https://avatars.githubusercontent.com/u/1315101?v=4",
+        "birthdate": "1992-07-02",
+        "gender": "M"
     },
     {
         "username": "dailentz",
         "email": "dailentz@gmail.com",
-        "full_name": "Daiana Lentz",
-        "role": "admin",
+        "emailVerified": true,
+        "name": "Daiana Lentz",
+        "role": "ADMIN",
         "is_active": true,
-        "image_url": "https://avatars.githubusercontent.com/u/1315101?v=4",
-        "birhdate": "1990-01-27"
+        "image": "https://avatars.githubusercontent.com/u/1315101?v=4",
+        "birthdate": "1990-01-27",
+        "gender": "F"
     },
     {
         "username": "gustavocardoso",
         "email": "jhon.gustavo.cardoso@gmail.com",
-        "full_name": "Gustavo Cardoso",
-        "role": "user",
+        "emailVerified": true,
+        "name": "Gustavo Cardoso",
+        "role": "USER",
         "is_active": true,
-        "image_url": "https://avatars.githubusercontent.com/u/1315101?v=4",
-        "birhdate": "1966-02-12"
+        "image": "https://avatars.githubusercontent.com/u/1315101?v=4",
+        "birthdate": "1966-02-12",
+        "gender": "M"
     },
     {
         "username": "adrianacastillo",
         "email": "maria.adriana.castillo.1966@gmail.com",
-        "full_name": "Adriana Castillo",
-        "role": "user",
+        "emailVerified": true,
+        "name": "Adriana Castillo",
+        "role": "USER",
         "is_active": true,
-        "image_url": "https://avatars.githubusercontent.com/u/1315101?v=4",
-        "birhdate": "1966-06-01"
+        "image": "https://avatars.githubusercontent.com/u/1315101?v=4",
+        "birthdate": "1966-06-01",
+        "gender": "F"
     },
     {
         "username": "valeriacardoso",
         "email": "valeriacardoso@gmail.com",
-        "full_name": "Valeria Cardoso",
-        "role": "user",
+        "emailVerified": true,
+        "name": "Valeria Cardoso",
+        "role": "USER",
         "is_active": true,
-        "image_url": "https://avatars.githubusercontent.com/u/1315101?v=4",
-        "birhdate": "1996-07-28"
+        "image": "https://avatars.githubusercontent.com/u/1315101?v=4",
+        "birthdate": "1996-07-28",
+        "gender": "F"
     },
     {
         "username": "cirocardoso",
         "email": "cirocardoso@gmail.com",
-        "full_name": "Ciro Cardoso",
-        "role": "user",
+        "emailVerified": true,
+        "name": "Ciro Cardoso",
+        "role": "MODERATOR",
         "is_active": true,
-        "image_url": "https://avatars.githubusercontent.com/u/1315101?v=4",
-        "birhdate": "2022-11-23"
+        "image": "https://avatars.githubusercontent.com/u/1315101?v=4",
+        "birthdate": "2022-11-23",
+        "gender": "M"
     }
 ]

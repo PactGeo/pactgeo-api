@@ -7,11 +7,11 @@ from api.database import get_session
 
 router = APIRouter()
 
-@router.get("/countries", response_model=list[Country])
+@router.get("/", response_model=list[Country])
 def read_countries(db: Session = Depends(get_session)):
     return get_all_countries(db)
 
-@router.post("/countries", response_model=Country, status_code=status.HTTP_201_CREATED)
+@router.post("/", response_model=Country, status_code=status.HTTP_201_CREATED)
 def create_new_country(country_data: Country, session: Session = Depends(get_session)):
     existing_country = get_country_by_name(session, country_data.name)
     if existing_country:

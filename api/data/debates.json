@@ -1,142 +1,2121 @@
 [
     {
         "title": "The Climate Crisis: A Point of No Return",
-        "description": "Climate change is affecting every corner of the planet, from ocean acidification to intensifying weather phenomena. Are we doing enough to reverse the damage, or have we passed the point of no return? This debate explores global policies and solutions to combat climate change.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Environment", "Politics", "Society"]
+        "description": "Climate change is not just a distant threat—it is already reshaping ecosystems, economies, and communities across the globe. From the melting polar ice caps and rising sea levels threatening coastal cities, to the devastating wildfires and droughts endangering agriculture and livelihoods, the impacts of climate change are undeniable and escalating. As we approach what many scientists warn could be a \"point of no return,\" this debate invites you to critically examine the adequacy of current global policies and actions aimed at addressing this crisis. Are the international agreements like the Paris Accord enough, or do we need more radical, immediate measures? How can we ensure that the transition to a sustainable future is equitable and just, leaving no one behind? In this debate, we will explore not only the scientific and environmental aspects but also the ethical, economic, and political challenges. Join us in discussing the most pressing issue of our time, and let's find a way forward together.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Environment",
+            "Politics",
+            "Society"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "Economic Inequality: How to Bridge the Global Gap",
-        "description": "Economic inequality between and within countries continues to grow, leaving millions in extreme poverty while a small elite accumulates most of the world's wealth. This debate explores potential economic reforms to balance the scales.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Economy", "Work", "Society"]
+        "description": "Economic inequality is more than just a statistic; it is a daily reality for billions of people who struggle to access basic needs like healthcare, education, and housing. The growing gap between the wealthy elite and the rest of the population has far-reaching consequences, from social unrest to the weakening of democratic institutions. In this debate, we will explore a range of potential economic reforms—such as progressive taxation, universal basic income, and wealth redistribution—that could help bridge the global gap. But how do we balance these reforms with economic growth, and what role should international organizations play in ensuring fair economic practices? Join us as we dissect the causes and solutions for one of the most pressing challenges of our time.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Economy",
+            "Work",
+            "Society"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "Pandemics and Global Health: Preparing for the Next Crisis",
-        "description": "The COVID-19 pandemic exposed weaknesses in the global health system. How can we better prepare for future pandemics? This debate focuses on international collaboration, equitable vaccine access, and strengthening health systems.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Health", "Society", "Innovation"]
+        "description": "The COVID-19 pandemic was a wake-up call for the global health system, revealing vulnerabilities in even the most advanced countries. As the world begins to recover, we must ask ourselves: are we prepared for the next pandemic? This debate will delve into the importance of international collaboration in disease surveillance, the ethical distribution of vaccines, and the strengthening of health infrastructure in low-income countries. What lessons have we learned, and how can we apply them to prevent future crises? This is a call to action for health professionals, policymakers, and citizens alike to contribute ideas and solutions for a safer future.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Health",
+            "Society",
+            "Innovation"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "The Future of Education: Digitalization and Inequality",
-        "description": "The digitalization of education accelerated during the pandemic but also revealed a growing digital divide. This debate explores how to ensure equitable access to quality education in an increasingly digital world.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Education", "Technology", "Society"]
+        "description": "The rapid shift to online learning during the COVID-19 pandemic exposed the deep digital divide that exists across the world. While some students thrived in a digital environment, others were left behind due to lack of access to technology or stable internet. This debate focuses on the future of education in a post-pandemic world: How can we ensure that all students, regardless of their socioeconomic background, have access to quality education? What role should governments and private companies play in closing the digital divide? And how can we leverage technology to not only enhance learning but also promote equity in education? Join us to discuss the challenges and opportunities that digitalization presents for education globally.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Education",
+            "Technology",
+            "Society"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "Freedom of Expression vs. Misinformation: How to Regulate Online Content",
         "description": "Social media has amplified both citizen voices and the spread of misinformation. This debate seeks to balance freedom of expression with the need to regulate harmful content without censorship.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Technology", "Law and Legislation", "Culture"]
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Technology",
+            "Law and Legislation",
+            "Culture"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "The Impact of Artificial Intelligence on the Labor Market",
         "description": "AI is transforming the way we work, eliminating some jobs while creating new ones. How can we prepare for a fair and balanced transition? This debate addresses the challenges and opportunities AI represents for workers worldwide.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Innovation", "Work", "Technology"]
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Innovation",
+            "Work",
+            "Technology"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "Migration Crisis: Seeking Global Solutions for Human Mobility",
         "description": "Wars, climate change, and poverty are driving an unprecedented migration crisis. This debate focuses on how countries can collaborate to manage migration fairly and humanely.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Politics", "Rights and Justice", "Society"]
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Politics",
+            "Rights and Justice",
+            "Society"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "Cybersecurity and Privacy: Are We Really Protected?",
         "description": "With the rise of cyberattacks, protecting data privacy is more critical than ever. This debate explores the policies and technologies needed to safeguard citizens in a digital world.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Security", "Technology", "Law and Legislation"]
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Security",
+            "Technology",
+            "Law and Legislation"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "Challenges to Democracy in the Age of Disinformation",
         "description": "Democracies are being tested by disinformation and media manipulation. How can countries defend their democratic processes in such a volatile information environment?",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Politics", "Culture", "Society"]
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Politics",
+            "Culture",
+            "Society"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "The Rise of Authoritarianism: Is Global Freedom at Risk?",
         "description": "Authoritarianism is on the rise in many countries, threatening human rights and civil liberties. This debate examines the causes and potential solutions to counter this global trend.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Rights and Justice", "Politics", "Society"]
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Rights and Justice",
+            "Politics",
+            "Society"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "Regulating Big Tech: Who Controls Technology?",
         "description": "Big tech companies wield unprecedented power over information and markets. Should governments step in more, and if so, how? This debate examines the need for regulation of these tech giants.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Technology", "Law and Legislation", "Innovation"]
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Technology",
+            "Law and Legislation",
+            "Innovation"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "Future of Work: Adapting to an Automated World",
-        "description": "Automation is replacing traditional jobs, and it’s crucial to understand how governments and businesses can support workers through this transition.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Work", "Innovation", "Economy"]
+        "description": "Automation is replacing traditional jobs, and it\u2019s crucial to understand how governments and businesses can support workers through this transition.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Work",
+            "Innovation",
+            "Economy"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "Human Rights in Times of Crisis: Are They Respected?",
         "description": "Political and economic crises often lead to human rights violations. This debate seeks solutions to protect basic rights, even in times of instability.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Rights and Justice", "Politics", "Society"]
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Rights and Justice",
+            "Politics",
+            "Society"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "The Future of Energy: Transition to Renewable",
         "description": "Transitioning to renewable energy is vital to combat climate change. This debate analyzes how countries can speed up this transition and overcome political and economic obstacles.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Environment", "Economy", "Innovation"]
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Environment",
+            "Economy",
+            "Innovation"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "Sex Education: Rights and Challenges in the 21st Century",
         "description": "Sex education remains a controversial topic in many parts of the world. This debate focuses on how to educate new generations about sexual health and rights effectively and respectfully.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Education", "Society", "Rights and Justice"]
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Education",
+            "Society",
+            "Rights and Justice"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "Globalization and Culture: Are We Losing Our Roots?",
         "description": "Globalization has connected the world but has also put local cultures at risk. This debate explores how to maintain cultural diversity in an increasingly homogeneous world.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Culture", "Society", "Economy"]
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Culture",
+            "Society",
+            "Economy"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "Gender Gap in the Workplace: What Needs to Be Done?",
         "description": "Despite progress, the gender gap in employment and wages remains a significant issue. This debate explores the policies needed to achieve gender equality at work.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Work", "Rights and Justice", "Society"]
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Work",
+            "Rights and Justice",
+            "Society"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "Food Security: The Challenge of Feeding the World",
         "description": "With a growing population, food security has become a critical challenge. This debate examines how we can ensure access to sufficient and healthy food for everyone.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Health", "Environment", "Economy"]
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Health",
+            "Environment",
+            "Economy"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "The Role of the UN in the 21st Century: Reform or Replace?",
         "description": "The effectiveness of the United Nations is being questioned more than ever. Is it time to reform the UN or seek alternatives that better respond to global challenges?",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Politics", "Law and Legislation", "Society"]
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Politics",
+            "Law and Legislation",
+            "Society"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
     },
     {
         "title": "Ethical Dilemmas of Biotechnology: Genetic Modification and the Future of Humanity",
         "description": "Biotechnology is advancing rapidly, allowing genetic modifications in plants, animals, and humans. This debate addresses the ethical dilemmas and regulations needed to handle these advances.",
-        "type": "global",
-        "image_url": "https://res.cloudinary.com/demo/image/upload/w_400/sample.jpg",
-        "tags": ["Innovation", "Health", "Law and Legislation"]
+        "type": "GLOBAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Innovation",
+            "Health",
+            "Law and Legislation"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Water Scarcity: A Looming Global Crisis",
+        "description": "As populations grow and climate change exacerbates drought conditions, water scarcity is becoming a critical global issue. This debate explores how nations can collaborate to manage water resources sustainably and equitably.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Environment", "Crisis", "Natural Resources"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Ethics of Space Exploration: Who Owns the Cosmos?",
+        "description": "With private companies and nations racing to explore space, this debate centers on the ethical and legal implications of space ownership and resource exploitation.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Technology", "Law and Legislation", "Innovation"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Global Economic Recovery: Balancing Growth and Sustainability",
+        "description": "As the world recovers from economic shocks, this debate focuses on how to achieve sustainable growth without exacerbating environmental degradation or social inequality.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Economy", "Environment", "Society"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Future of Global Trade: Protectionism vs. Free Markets",
+        "description": "In an increasingly interconnected world, this debate explores the tensions between protectionist policies and the principles of free trade, and their implications for global economies.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Trade", "Economy", "Geopolitics"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Global Refugee Crisis: Solutions and Responsibilities",
+        "description": "With millions displaced by conflict, climate change, and economic hardship, this debate examines the global response to the refugee crisis and the ethical obligations of nations.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Migration", "Rights and Justice", "Crisis"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Role of Technology in Combating Climate Change",
+        "description": "Technology has the potential to mitigate the effects of climate change, but can it do so quickly enough? This debate focuses on the innovations needed to address the climate crisis.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Technology", "Environment", "Innovation"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Cyber Warfare: The New Frontline in Global Conflict",
+        "description": "As cyberattacks become more frequent and sophisticated, this debate explores the implications of cyber warfare for national security and international relations.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Security", "Technology", "Conflict"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Human Rights and Surveillance: Privacy in the Digital Age",
+        "description": "As governments and corporations expand their surveillance capabilities, this debate examines the balance between security and privacy, and the impact on human rights.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Rights and Justice", "Technology", "Law and Legislation"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Future of Global Health: Universal Healthcare and Access",
+        "description": "As disparities in healthcare access continue to grow, this debate focuses on the feasibility of universal healthcare and the role of international cooperation in achieving it.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Health", "Society", "Innovation"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Digital Currencies: The Future of Money or a Passing Trend?",
+        "description": "With the rise of cryptocurrencies and digital payment systems, this debate explores whether digital currencies will replace traditional money and what that means for the global economy.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Economy", "Technology", "Innovation"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Education in Crisis: The Impact of War on Learning",
+        "description": "Conflicts disrupt education for millions of children worldwide. This debate examines the strategies to ensure continued access to education in war-torn regions.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Education", "Crisis", "Rights and Justice"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Ethics of Artificial Intelligence: Balancing Innovation and Responsibility",
+        "description": "As AI becomes increasingly integrated into everyday life, this debate explores the ethical responsibilities of AI developers, governments, and users in ensuring AI is used for the common good.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Innovation", "Technology", "Rights and Justice"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Global Housing Crisis: Affordable Homes for All",
+        "description": "With housing prices soaring in major cities worldwide, this debate examines the global housing crisis and the solutions needed to provide affordable homes for everyone.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Economy", "Society", "Crisis"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Globalization vs. Localism: Which Path Forward?",
+        "description": "As the world becomes more interconnected, this debate focuses on the tension between globalization and localism, and which approach offers the best path forward for sustainable development.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Economy", "Culture", "Society"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Future of Work: Remote, Hybrid, or Back to the Office?",
+        "description": "The COVID-19 pandemic has permanently changed the way we work. This debate explores the future of work: Should companies fully embrace remote work, return to the office, or adopt a hybrid model?",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Work", "Technology", "Society"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Climate Refugees: The New Face of Migration",
+        "description": "As climate change displaces millions, this debate examines the phenomenon of climate refugees and the international response needed to protect these vulnerable populations.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Environment", "Migration", "Rights and Justice"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Role of Religion in Modern Society: Unity or Division?",
+        "description": "Religion plays a powerful role in shaping societies, but it can also be a source of division. This debate explores the role of religion in modern society and its impact on global unity.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Culture", "Society", "Rights and Justice"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Biotechnology in Agriculture: Feeding the World or Playing God?",
+        "description": "As biotechnology advances in agriculture, this debate focuses on the ethical and environmental implications of genetically modified organisms (GMOs) in our food supply.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Innovation", "Environment", "Health"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Impact of Globalization on Mental Health",
+        "description": "As globalization increases, so does the pressure on mental health across the world. This debate explores how we can address the growing mental health crisis in a rapidly changing world.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Health", "Society", "Economy"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Food Waste: A Global Challenge in the Fight Against Hunger",
+        "description": "With millions of people going hungry, food waste is an unacceptable global issue. This debate explores solutions to reduce food waste and improve food security worldwide.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Environment", "Economy", "Health"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Future of Democracy: Is It Under Threat?",
+        "description": "As authoritarian regimes rise and democratic norms are challenged, this debate explores the future of democracy and the actions needed to protect it globally.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Politics", "Law and Legislation", "Rights and Justice"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Impact of Climate Change on Global Food Security",
+        "description": "Climate change is altering weather patterns, affecting crop yields, and threatening food security worldwide. This debate focuses on how we can adapt our agricultural practices and policies to ensure food security in the face of climate change.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Environment", "Economy", "Health"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Renewable Energy vs. Fossil Fuels: The Path to a Sustainable Future",
+        "description": "As the world faces the dual challenges of energy demand and climate change, this debate examines the transition from fossil fuels to renewable energy sources. What policies and innovations are needed to accelerate this transition?",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Environment", "Economy", "Energy"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Role of Women in Global Development: Breaking Barriers",
+        "description": "Despite progress, women around the world still face significant barriers to full participation in economic, political, and social life. This debate explores the policies and initiatives needed to empower women and promote gender equality globally.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Rights and Justice", "Economy", "Society"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Future of Global Health: Addressing Non-Communicable Diseases",
+        "description": "Non-communicable diseases (NCDs) such as diabetes, heart disease, and cancer are rising globally. This debate focuses on how the world can address the growing burden of NCDs and promote healthier lifestyles.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Health", "Society", "Economy"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Global Supply Chains: Resilience in a Time of Crisis",
+        "description": "The COVID-19 pandemic exposed vulnerabilities in global supply chains. This debate examines how we can build more resilient and sustainable supply chains to withstand future crises.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Economy", "Trade", "Crisis"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Global Water Crisis: Managing Scarce Resources",
+        "description": "Water scarcity is becoming an increasingly pressing issue as populations grow and climate change exacerbates drought conditions. This debate explores global strategies for managing water resources sustainably.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Environment", "Crisis", "Natural Resources"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Global Mental Health: Addressing the Silent Crisis",
+        "description": "Mental health issues are on the rise worldwide, exacerbated by social, economic, and political stressors. This debate focuses on how we can improve mental health care and reduce the stigma surrounding mental illness globally.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Health", "Society", "Economy"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Role of the UN in Global Peacekeeping: Successes and Failures",
+        "description": "The United Nations has played a crucial role in peacekeeping around the world, but it has also faced criticism for its failures. This debate explores the successes and shortcomings of the UN's peacekeeping efforts and the reforms needed for the future.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Politics", "Geopolitics", "Crisis"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Impact of Global Tourism on Local Cultures",
+        "description": "Tourism is a major economic driver for many countries, but it can also threaten local cultures and environments. This debate examines the balance between promoting tourism and preserving cultural heritage.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Culture", "Economy", "Environment"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Global Waste Crisis: Solutions for a Sustainable Future",
+        "description": "The world is facing a growing waste problem, from plastic pollution to electronic waste. This debate explores innovative solutions for reducing waste and promoting a circular economy.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Environment", "Innovation", "Economy"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Global Data Privacy: Who Owns Your Information?",
+        "description": "In an age where data is the new currency, this debate explores the complexities of data ownership, privacy, and the role of governments and corporations in protecting or exploiting personal information.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Technology", "Law and Legislation", "Rights and Justice"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Future of Global Trade: Tariffs, Sanctions, and Trade Wars",
+        "description": "Trade wars, tariffs, and sanctions are reshaping the global economic landscape. This debate examines the impact of these policies on international relations and global markets.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Trade", "Economy", "Geopolitics"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Artificial Intelligence in Warfare: Ethical and Strategic Implications",
+        "description": "As AI technology is increasingly used in military applications, this debate explores the ethical and strategic implications of AI in warfare and how international law should evolve to address these challenges.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Technology", "Security", "Law and Legislation"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Global Income Inequality: Can We Achieve Economic Justice?",
+        "description": "Income inequality continues to widen both within and between countries. This debate examines the root causes of global income inequality and the policies needed to promote economic justice.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Economy", "Society", "Rights and Justice"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Role of Social Media in Shaping Public Opinion",
+        "description": "Social media platforms have become powerful tools for influencing public opinion and political outcomes. This debate explores the responsibilities of social media companies and the impact of their platforms on democracy.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Technology", "Politics", "Culture"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Global Impact of Overpopulation: Sustainability and Resources",
+        "description": "Overpopulation is putting unprecedented pressure on the planet's resources. This debate examines the global impact of overpopulation and the strategies needed to achieve sustainability.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Environment", "Society", "Natural Resources"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Future of International Cooperation: Multilateralism vs. Unilateralism",
+        "description": "In a world facing global challenges like climate change, pandemics, and security threats, this debate explores the effectiveness of multilateralism versus unilateralism in addressing these issues.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Politics", "Geopolitics", "Society"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Digital Divide: Bridging the Gap in Global Connectivity",
+        "description": "As the world becomes increasingly digital, the gap between those with and without access to technology is widening. This debate focuses on how to bridge the digital divide and ensure global connectivity for all.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Technology", "Education", "Society"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Ethics of Genetic Engineering: Redefining Human Potential",
+        "description": "Advances in genetic engineering have the potential to cure diseases and extend human life, but they also raise ethical concerns. This debate explores the implications of genetic engineering for the future of humanity.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Health", "Innovation", "Rights and Justice"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Impact of Urbanization on the Environment and Society",
+        "description": "As more people move to urban areas, cities are facing challenges related to sustainability, infrastructure, and social equity. This debate examines the impact of urbanization and the strategies needed to create livable, sustainable cities.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Environment", "Society", "Economy"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Global Plastic Pollution Crisis: Who Is Responsible?",
+        "description": "Plastic pollution is choking our oceans and ecosystems. This debate explores the global response needed to tackle plastic waste and hold corporations and governments accountable.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Environment", "Economy", "Natural Resources"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Future of Space Exploration: Cooperation or Competition?",
+        "description": "As more countries and private companies enter the space race, this debate examines whether space exploration should be driven by international cooperation or competition, and what it means for humanity’s future in space.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Innovation", "Geopolitics", "Technology"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Role of Youth in Global Change: Empowerment and Action",
+        "description": "Youth movements are increasingly at the forefront of global change. This debate focuses on how young people can be empowered to drive social, political, and environmental change.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Society", "Education", "Rights and Justice"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Global Food Systems: Sustainability and Equity",
+        "description": "The global food system is under strain from climate change, population growth, and inequity. This debate explores how to create a sustainable and equitable food system for the future.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Health", "Environment", "Economy"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Future of Global Health: Addressing Pandemics and Beyond",
+        "description": "The COVID-19 pandemic highlighted weaknesses in global health systems. This debate explores how we can strengthen health infrastructure and prepare for future pandemics.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Health", "Innovation", "Society"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Ethics of Autonomous Weapons: Should They Be Banned?",
+        "description": "As military technology advances, autonomous weapons are becoming a reality. This debate explores the ethical implications of autonomous weapons and whether they should be banned under international law.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Technology", "Law and Legislation", "Security"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Global Financial Markets: Regulation vs. Deregulation",
+        "description": "The 2008 financial crisis sparked a global debate on the role of regulation in financial markets. This debate examines the balance between regulation and deregulation in ensuring financial stability and growth.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Economy", "Law and Legislation", "Trade"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Global Cybersecurity: Protecting Nations in a Digital World",
+        "description": "Cyberattacks are becoming more frequent and sophisticated, posing a threat to national security. This debate explores the strategies and international cooperation needed to protect nations in the digital age.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Security", "Technology", "Geopolitics"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Impact of Global Media on Cultural Identity",
+        "description": "Global media has a profound impact on cultural identity, often promoting a homogenized culture. This debate explores the effects of global media on local cultures and how to preserve cultural diversity.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Culture", "Society", "Technology"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Role of International Law in Protecting Human Rights",
+        "description": "Human rights violations continue to occur globally, despite international laws aimed at protecting them. This debate examines the effectiveness of international law in upholding human rights and what more can be done.",
+        "type": "GLOBAL",
+        "public": true,
+        "images": ["https://placehold.co/600x400"],
+        "tags": ["Rights and Justice", "Law and Legislation", "Geopolitics"],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Arctic Race: Managing Territorial Claims and Environmental Protection",
+        "description": "The Arctic region is becoming a focal point for resource exploration and navigation routes. With multiple countries laying territorial claims and climate change intensifying, how should the involved countries manage these territorial disputes while protecting the environment?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Environment",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "United States",
+            "Canada",
+            "Russia",
+            "Norway",
+            "Denmark"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Belt and Road Initiative: Opportunities and Challenges for Participating Countries",
+        "description": "China's Belt and Road Initiative (BRI) has opened new development opportunities for many countries, but it has also raised concerns about debt, sovereignty, and economic dependence. How can participating countries balance the economic benefits with the associated risks?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Economy",
+            "International Relations",
+            "Infrastructure"
+        ],
+        "countries_involved": [
+            "China",
+            "Pakistan",
+            "Italy",
+            "Kenya",
+            "Sri Lanka"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Amazon Rainforest: International Responsibility and National Sovereignty",
+        "description": "The Amazon is vital for global biodiversity and climate, but it is also a key resource for South American countries. How should Amazon basin countries balance economic development with environmental preservation? What role should other countries play?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Environment",
+            "Politics",
+            "Sustainability"
+        ],
+        "countries_involved": [
+            "Brazil",
+            "Peru",
+            "Colombia",
+            "Bolivia"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Data Privacy and Cross-Border Surveillance: Striking a Balance",
+        "description": "Mass surveillance and cross-border data sharing have raised privacy concerns. How can countries cooperate to ensure security without compromising individual privacy? Should international standards be established?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Technology",
+            "Law and Legislation",
+            "Security"
+        ],
+        "countries_involved": [
+            "United States",
+            "United Kingdom",
+            "Germany",
+            "India"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Water Wars: Navigating Transboundary Water Disputes in South Asia",
+        "description": "Rivers that cross multiple countries in South Asia are vital water sources but also a source of tension. How can countries share these water resources fairly and sustainably to avoid conflicts?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Environment",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "India",
+            "Pakistan",
+            "Bangladesh",
+            "Nepal"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Trade Disputes and Tariffs: The Impact on Global Supply Chains",
+        "description": "Trade disputes and tariffs between major economies are impacting global supply chains. How can the involved countries resolve these disputes without harming the global economy?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Economy",
+            "International Relations",
+            "Trade"
+        ],
+        "countries_involved": [
+            "United States",
+            "China",
+            "European Union",
+            "Japan"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Energy Security in Europe: Reducing Dependence on Russian Gas",
+        "description": "Europe's dependence on Russian gas has been a source of concern, especially during times of geopolitical tension. What strategies can European countries adopt to diversify their energy sources and ensure supply security?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Energy",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Germany",
+            "France",
+            "Poland",
+            "Ukraine",
+            "Russia"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The South China Sea Dispute: Navigating Maritime Tensions",
+        "description": "The South China Sea is a critical maritime region for global trade, but territorial disputes between China and neighboring countries have led to increased tensions. How can these countries resolve their disputes while ensuring freedom of navigation?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Politics",
+            "International Relations",
+            "Security"
+        ],
+        "countries_involved": [
+            "China",
+            "Philippines",
+            "Vietnam",
+            "Malaysia",
+            "Brunei"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Iran Nuclear Deal: Prospects for Regional Stability",
+        "description": "The Iran Nuclear Deal, or JCPOA, has been a subject of international debate. With the U.S. withdrawal and ongoing tensions, can the involved countries renegotiate the deal to prevent nuclear proliferation and ensure regional stability?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Politics",
+            "Security",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Iran",
+            "United States",
+            "France",
+            "Germany",
+            "United Kingdom",
+            "Russia",
+            "China"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Post-Brexit Trade Relations: The Impact on Europe and Beyond",
+        "description": "Brexit has reshaped the trade landscape in Europe and beyond. How are the United Kingdom and the European Union navigating their new trade relations, and what impact does this have on global trade?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Economy",
+            "Trade",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "United Kingdom",
+            "European Union",
+            "United States",
+            "Japan"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Syrian Refugee Crisis: Burden Sharing Among Nations",
+        "description": "The Syrian Civil War has led to one of the largest refugee crises in modern history. How should the international community share the responsibility of hosting and supporting refugees?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Human Rights",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Turkey",
+            "Lebanon",
+            "Jordan",
+            "Germany",
+            "United States"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Fighting Climate Change: The Role of Developing Countries",
+        "description": "While developed nations have historically contributed the most to climate change, developing countries are now playing a critical role in global climate efforts. How can these countries balance economic development with environmental responsibility?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Environment",
+            "Economy",
+            "Politics"
+        ],
+        "countries_involved": [
+            "India",
+            "China",
+            "Brazil",
+            "South Africa",
+            "Indonesia"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The African Continental Free Trade Area: A New Dawn for African Trade",
+        "description": "The African Continental Free Trade Area (AfCFTA) is set to revolutionize trade within Africa, but it also faces significant challenges. How can African nations collaborate to ensure the success of this historic trade agreement?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Economy",
+            "Trade",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "South Africa",
+            "Nigeria",
+            "Egypt",
+            "Kenya",
+            "Ethiopia"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Vaccine Diplomacy: The Role of Vaccines in International Relations",
+        "description": "During the COVID-19 pandemic, vaccines became a tool of diplomacy. How have countries used vaccine distribution to influence global relations, and what are the implications for future public health crises?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Health",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "China",
+            "India",
+            "Russia",
+            "United States",
+            "European Union"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Rising Tensions in the Eastern Mediterranean: Energy and Borders",
+        "description": "The discovery of natural gas reserves in the Eastern Mediterranean has led to rising tensions between neighboring countries. How should these countries resolve their disputes over maritime borders and energy exploration?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Energy",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Greece",
+            "Turkey",
+            "Cyprus",
+            "Israel",
+            "Egypt"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Future of NATO: Expanding Eastward or Strengthening from Within?",
+        "description": "As NATO considers expanding its membership, questions arise about the future direction of the alliance. Should NATO focus on expansion into Eastern Europe, or should it concentrate on strengthening existing member states?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Security",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "United States",
+            "United Kingdom",
+            "Poland",
+            "Germany",
+            "Turkey"
+        ],
+        "created_at": "2024-08-30T21:26:03.215251",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Post-COVID Economic Recovery: Lessons from Different Regions",
+        "description": "Countries around the world have adopted different strategies to recover from the economic impacts of the COVID-19 pandemic. What can regions learn from each other to build more resilient economies?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Economy",
+            "Health",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "United States",
+            "China",
+            "Germany",
+            "Brazil",
+            "South Korea"
+        ],
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Deforestation in Southeast Asia: Balancing Development and Conservation",
+        "description": "The rapid deforestation in Southeast Asia, driven by agriculture and logging, threatens biodiversity and contributes to climate change. How can countries in the region balance economic development with environmental conservation?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Environment",
+            "Economy",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Indonesia",
+            "Malaysia",
+            "Thailand",
+            "Vietnam",
+            "Philippines"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Fishing Disputes in the South China Sea: Sustainable Management or Conflict?",
+        "description": "Overfishing and territorial disputes in the South China Sea are leading to tensions among neighboring countries. How can these nations work together to ensure sustainable fishing practices and avoid conflict?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Environment",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "China",
+            "Vietnam",
+            "Philippines",
+            "Malaysia",
+            "Brunei"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Venezuela Crisis: Regional and International Responses",
+        "description": "The ongoing political and economic crisis in Venezuela has led to mass migration and regional instability. What roles should neighboring countries and the international community play in addressing the crisis?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Politics",
+            "Human Rights",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Venezuela",
+            "Colombia",
+            "Brazil",
+            "United States",
+            "European Union"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Natural Gas Reserves in the Eastern Mediterranean: Cooperation or Conflict?",
+        "description": "The discovery of significant natural gas reserves in the Eastern Mediterranean has sparked disputes over maritime boundaries. How can the involved countries cooperate to manage these resources without escalating tensions?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Energy",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Greece",
+            "Turkey",
+            "Cyprus",
+            "Israel",
+            "Egypt"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Managing the Refugee Crisis in Europe: Solidarity or Strain?",
+        "description": "The refugee crisis in Europe continues to challenge the region's policies on asylum and immigration. How can European countries balance their humanitarian obligations with the political and social challenges of integrating refugees?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Human Rights",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Germany",
+            "France",
+            "Italy",
+            "Greece",
+            "Turkey"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Water Scarcity in the Middle East: Cooperation for Sustainable Solutions",
+        "description": "Water scarcity is a growing challenge in the Middle East, exacerbated by climate change and population growth. How can countries in the region cooperate to manage shared water resources sustainably?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Environment",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Israel",
+            "Jordan",
+            "Lebanon",
+            "Syria",
+            "Palestine"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Future of the Amazon: International Responsibility or National Sovereignty?",
+        "description": "The Amazon rainforest is crucial for global biodiversity and climate regulation, but it is also under threat from deforestation. How should Amazonian countries balance their economic needs with environmental protection, and what role should the international community play?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Environment",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Brazil",
+            "Peru",
+            "Colombia",
+            "Bolivia",
+            "Venezuela"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Impact of Sanctions on North Korea: Diplomacy or Isolation?",
+        "description": "International sanctions on North Korea have aimed to curb its nuclear program, but they have also led to widespread economic hardship. How effective are these sanctions, and should the international community pursue diplomacy or continue with isolation?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Politics",
+            "Security",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "North Korea",
+            "United States",
+            "China",
+            "South Korea",
+            "Russia"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Cybersecurity Threats in Asia: Building Regional Cooperation",
+        "description": "As cyberattacks become more frequent and sophisticated, Asian countries are increasingly vulnerable to these threats. How can nations in the region work together to strengthen cybersecurity and protect critical infrastructure?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Security",
+            "Technology",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Japan",
+            "South Korea",
+            "India",
+            "China",
+            "Australia"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Transnational Crime in Latin America: Tackling Drug Trafficking and Corruption",
+        "description": "Drug trafficking and corruption are major challenges in Latin America, affecting stability and development across the region. How can countries collaborate to combat these transnational crimes effectively?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Security",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Mexico",
+            "Colombia",
+            "Brazil",
+            "Peru",
+            "United States"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Climate Change and Food Security in Africa: Addressing the Growing Crisis",
+        "description": "Climate change is severely impacting agriculture and food security in Africa, leading to increased hunger and poverty. How can African nations and the international community work together to build resilience and ensure food security?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Environment",
+            "Economy",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Nigeria",
+            "Ethiopia",
+            "Kenya",
+            "South Africa",
+            "Uganda"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Post-Brexit Immigration Policies: Balancing Security and Integration",
+        "description": "Brexit has led to significant changes in immigration policies in the UK and EU, affecting the flow of migrants and integration strategies. How can these regions manage immigration in a way that ensures security while promoting social cohesion?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Politics",
+            "International Relations",
+            "Society"
+        ],
+        "countries_involved": [
+            "United Kingdom",
+            "France",
+            "Germany",
+            "Spain",
+            "Poland"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Impact of China's Belt and Road Initiative on Global Trade",
+        "description": "China's Belt and Road Initiative (BRI) has reshaped global trade routes, but it has also raised concerns about debt, sovereignty, and environmental impact. How should countries involved in BRI projects navigate these challenges?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Economy",
+            "International Relations",
+            "Trade"
+        ],
+        "countries_involved": [
+            "China",
+            "Pakistan",
+            "Italy",
+            "Kenya",
+            "Malaysia"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Arctic Resource Exploitation: Cooperation or Competition?",
+        "description": "As Arctic ice melts, previously inaccessible resources are becoming available, leading to new territorial claims and environmental concerns. How should Arctic nations manage the exploitation of these resources while protecting the fragile environment?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Environment",
+            "Economy",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Russia",
+            "Canada",
+            "United States",
+            "Norway",
+            "Denmark"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Eastern Mediterranean Migrant Crisis: Sharing the Burden",
+        "description": "The ongoing migrant crisis in the Eastern Mediterranean has put immense pressure on countries in the region. How can Europe and neighboring countries share the burden and ensure humane treatment for all migrants?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Human Rights",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Greece",
+            "Turkey",
+            "Italy",
+            "Germany",
+            "France"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Role of NATO in Eastern Europe: Deterrence or Provocation?",
+        "description": "NATO's presence in Eastern Europe has been a point of contention between the alliance and Russia. How should NATO balance its deterrence efforts with the need to avoid escalating tensions in the region?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Security",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "United States",
+            "Poland",
+            "Lithuania",
+            "Germany",
+            "Russia"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "China-Taiwan Relations: The Path Forward",
+        "description": "Tensions between China and Taiwan have been escalating, raising concerns about regional stability. What is the path forward for these two nations, and what role should other countries play in mediating or supporting the dialogue?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Politics",
+            "International Relations",
+            "Security"
+        ],
+        "countries_involved": [
+            "China",
+            "Taiwan",
+            "United States",
+            "Japan",
+            "Australia"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Rebuilding Afghanistan: International Cooperation and Challenges",
+        "description": "After decades of conflict, Afghanistan faces the challenge of rebuilding its society and economy. How can the international community support Afghanistan in its efforts to achieve stability and prosperity?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Politics",
+            "Economy",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Afghanistan",
+            "United States",
+            "Pakistan",
+            "Iran",
+            "India"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Managing the Nile Waters: Cooperation Among Riparian States",
+        "description": "The Nile River is a lifeline for several countries in Northeast Africa, but disputes over water usage have led to tensions. How can these riparian states cooperate to manage the Nile's waters sustainably?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Environment",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Egypt",
+            "Sudan",
+            "Ethiopia",
+            "Uganda",
+            "Kenya"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Post-Pandemic Economic Recovery in Southeast Asia: Regional Collaboration",
+        "description": "Southeast Asia's economies were hit hard by the COVID-19 pandemic. How can countries in the region collaborate to achieve a robust and equitable economic recovery?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Economy",
+            "Health",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Indonesia",
+            "Thailand",
+            "Malaysia",
+            "Singapore",
+            "Vietnam"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Renewable Energy in Latin America: Opportunities and Challenges",
+        "description": "Latin America has significant potential for renewable energy, but there are also challenges related to infrastructure, investment, and policy. How can countries in the region collaborate to harness their renewable energy potential?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Energy",
+            "Economy",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Brazil",
+            "Argentina",
+            "Chile",
+            "Mexico",
+            "Colombia"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Western Sahara Conflict: Pathways to Peace",
+        "description": "The conflict over Western Sahara remains unresolved, leading to tensions in North Africa. How can the international community support a peaceful resolution to this long-standing territorial dispute?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Politics",
+            "International Relations",
+            "Security"
+        ],
+        "countries_involved": [
+            "Morocco",
+            "Algeria",
+            "Mauritania",
+            "Spain",
+            "United Nations"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Internet Governance: Navigating Cyber Sovereignty and Global Standards",
+        "description": "As the internet becomes more central to global communication and commerce, countries are grappling with issues of cyber sovereignty and international standards. How can the global community navigate these challenges while ensuring a free and open internet?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Technology",
+            "Law and Legislation",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "United States",
+            "China",
+            "Russia",
+            "Germany",
+            "India"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Humanitarian Aid in Conflict Zones: Neutrality or Political Tool?",
+        "description": "Humanitarian aid is essential in conflict zones, but it is often influenced by political agendas. How can the international community ensure that aid remains neutral and reaches those in need without exacerbating conflicts?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Human Rights",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "Syria",
+            "Yemen",
+            "South Sudan",
+            "Afghanistan",
+            "United Nations"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Economic Sanctions: Effective Diplomacy or Unjust Punishment?",
+        "description": "Economic sanctions are often used as a tool of diplomacy, but their effectiveness and impact on civilian populations are debated. How should the international community balance the use of sanctions with the need to protect human rights and economic stability?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Economy",
+            "Politics",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "United States",
+            "Iran",
+            "North Korea",
+            "Russia",
+            "Cuba"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "The Future of Global Trade Agreements: Bilateral vs. Multilateral Approaches",
+        "description": "The landscape of global trade is changing, with a shift towards bilateral agreements in some regions. How should countries approach trade agreements in the future, and what are the implications for multilateralism and global cooperation?",
+        "type": "INTERNATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "tags": [
+            "Economy",
+            "Trade",
+            "International Relations"
+        ],
+        "countries_involved": [
+            "United States",
+            "China",
+            "European Union",
+            "Japan",
+            "India"
+        ],
+        "created_at": "2024-09-06T00:00:00.000Z",
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92"
+    },
+    {
+        "title": "Economic Policy Debate: Dollarization in Argentina",
+        "description": "Should Argentina officially adopt the U.S. dollar as its currency? This debate explores the potential benefits and risks of dollarization, including its impact on inflation, economic stability, and sovereignty.",
+        "type": "NATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92",
+        "subnations_involved": ["Buenos Aires", "Córdoba", "Santa Fe"],
+        "country": "Argentina",
+        "tags": [
+            "Economy",
+            "Health",
+            "International Relations"
+        ]
+    },
+    {
+        "title": "Environmental Debate: Deforestation in the Gran Chaco",
+        "description": "Deforestation in Argentina's Gran Chaco forest continues to be a pressing issue. This debate focuses on the balance between agricultural expansion and environmental conservation, examining the policies needed to protect one of South America's most vital ecosystems.",
+        "type": "NATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92",
+        "subnations_involved": ["ALL"],
+        "country": "Argentina",
+        "tags": [
+            "Economy",
+            "Health",
+            "International Relations"
+        ]
+    },
+    {
+        "title": "Political Reform: Uruguay's Electoral System",
+        "description": "Uruguay is considering changes to its electoral system, including the introduction of primaries and adjustments to the proportional representation model. This debate examines the potential impacts on political stability and representation.",
+        "type": "NATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92",
+        "subnations_involved": ["ALL"],
+        "country": "Uruguay",
+        "tags": [
+            "Economy",
+            "Health",
+            "International Relations"
+        ]
+    },
+    {
+        "title": "Social Policy Debate: Pension Reform in Chile",
+        "description": "Chile is currently debating reforms to its pension system. The discussion focuses on the sustainability of the current model, the role of private versus public pension funds, and how to ensure fair and adequate pensions for all citizens.",
+        "type": "NATIONAL",
+        "public": true,
+        "images": [
+            "https://placehold.co/600x400"
+        ],
+        "status": "open",
+        "language": "en",
+        "creator_username": "sebacc92",
+        "subnations_involved": ["ALL"],
+        "country": "Chile",
+        "tags": [
+            "Economy",
+            "Health",
+            "International Relations"
+        ]
     }
 ]

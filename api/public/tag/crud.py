@@ -1,6 +1,7 @@
 from sqlmodel import Session, select
 from fastapi import HTTPException, status
 from api.public.tag.models import Tag, TagCreate, TagUpdate
+from api.public.debate.models import Debate
 
 def create_tag(tag: TagCreate, session: Session) -> Tag:
     db_tag = Tag.model_validate(tag)

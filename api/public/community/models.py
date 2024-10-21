@@ -1,22 +1,39 @@
 from datetime import datetime
-from typing import Optional
+from typing import Optional, TYPE_CHECKING
 from sqlmodel import Field, Relationship, SQLModel
-from api.public.usercommunitylink.models import UserCommunityLink  # Importar la clase
+from api.utils.generic_models import UserCommunityLink
+
+if TYPE_CHECKING:
+    from api.public.user.models import User
+    from api.public.poll.models import Poll
 
 class CommunityBase(SQLModel):
     name: str
     type: str
     description: Optional[str] = None
-    parent_id: Optional[int] = Field(default=None, foreign_key="community.id")  # Clave foránea a la misma tabla
+    parent_id: Optional[int] = Field(default=None, foreign_key="communities.id")
 
 class Community(CommunityBase, table=True):
-    id: int = Field(default=None, primary_key=True)
-    created_at: datetime = Field(default_factory=datetime.utcnow)
+    __tablename__ = "communities"
+    id: Optional[int] = Field(default=None, primary_key=True)
 
-    users: list["User"] = Relationship(back_populates="communities", link_model=UserCommunityLink)  # Usar la clase, no un string
+    # Relaciones
+    users: list["User"] = Relationship(
+        back_populates="communities",
+        link_model=UserCommunityLink
+    )
 
     parent: Optional["Community"] = Relationship(
-        sa_relationship_kwargs={"remote_side": "Community.id"}
+        sa_relationship_kwargs={"remote_side": "Community.id"},
+        back_populates="children"
+    )
+
+    children: list["Community"] = Relationship(
+        back_populates="parent"
+    )
+
+    polls: list["Poll"] = Relationship(
+        back_populates="community"
     )
 
 class CommunityCreate(CommunityBase):

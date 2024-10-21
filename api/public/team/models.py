@@ -1,3 +1,4 @@
+from typing import Optional
 from sqlmodel import Field, Relationship, SQLModel
 
 from api.utils.generic_models import HeroTeamLink
@@ -17,7 +18,7 @@ class TeamBase(SQLModel):
 
 
 class Team(TeamBase, table=True):
-    id: int | None = Field(default=None, primary_key=True)
+    id: Optional[int]  = Field(default=None, primary_key=True)
 
     heroes: list["Hero"] = Relationship(back_populates="teams", link_model=HeroTeamLink)  # type: ignore
 

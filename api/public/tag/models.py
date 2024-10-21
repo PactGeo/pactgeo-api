@@ -1,6 +1,6 @@
 from typing import Optional
 from sqlmodel import SQLModel, Field, Relationship
-from api.public.debate_tag_link.models import DebateTagLink
+from api.utils.generic_models import DebateTagLink
 
 class TagBase(SQLModel):
     name: str = Field(..., max_length=50)

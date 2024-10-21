@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, status
 from sqlmodel import Session
-from api.public.user.crud import create_user, get_user, update_user, delete_user
+from api.public.user.crud import create_user, get_user_by_username, update_user, delete_user
 from api.public.user.models import UserCreate, UserRead, UserUpdate
 from api.database import get_session
 
@@ -10,9 +10,9 @@ router = APIRouter()
 def create(user: UserCreate, db: Session = Depends(get_session)):
     return create_user(user, db)
 
-@router.get("/{user_id}", response_model=UserRead)
-def read(user_id: int, db: Session = Depends(get_session)):
-    return get_user(user_id, db)
+@router.get("/{username}", response_model=UserRead)
+def read_by_username(username: str, db: Session = Depends(get_session)):
+    return get_user_by_username(username, db)
 
 @router.patch("/{user_id}", response_model=UserRead)
 def update(user_id: int, user_update: UserUpdate, db: Session = Depends(get_session)):

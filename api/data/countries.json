@@ -1,22 +1,12 @@
 [
   {
     "area": 652230.0,
-    "borders": [
-      "IRN",
-      "PAK",
-      "TKM",
-      "UZB",
-      "TJK",
-      "CHN"
-    ],
+    "borders": ["IRN", "PAK", "TKM", "UZB", "TJK", "CHN"],
     "capital": [
       "Kabul"
     ],
     "capitalInfo": {
-      "latlng": [
-        34.52,
-        69.18
-      ]
+      "latlng": [ 34.52, 69.18 ]
     },
     "cca2": "AF",
     "cca3": "AFG",
@@ -42,9 +32,7 @@
     },
     "idd": {
       "root": "+9",
-      "suffixes": [
-        "3"
-      ]
+      "suffixes": [ "3" ]
     },
     "independent": true,
     "landlocked": true,

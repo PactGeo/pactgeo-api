@@ -1,6 +1,8 @@
 # models.py
 from typing import Optional
-from sqlmodel import Field, SQLModel
+from sqlmodel import SQLModel, Field, Relationship
+from api.utils.generic_models import DebateCountryInvolvedLink
+from api.public.continent.models import Continent
 
 class Country(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
@@ -29,3 +31,10 @@ class Country(SQLModel, table=True):
     status: Optional[str] = Field(default=None, description="Official assignment status of the country")
     subregion: Optional[str] = Field(default=None, description="Specific subregion of the country")
     timezone: Optional[str] = Field(default=None, description="Primary time zone of the country")
+
+    continent_id: Optional[int] = Field(default=None, foreign_key="continent.id", description="Foreign key to the parent continent")
+    
+    # Relationship
+    continent: Optional["Continent"] = Relationship(back_populates="countries")
+    subnations: list["Subnation"] = Relationship(back_populates="country")
+    debates: list["Debate"] = Relationship(back_populates="countries_involved", link_model=DebateCountryInvolvedLink)

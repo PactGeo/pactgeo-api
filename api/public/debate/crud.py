@@ -1,100 +1,114 @@
+import json
+from slugify import slugify
+from datetime import datetime
 from sqlmodel import Session, select
 from fastapi import HTTPException, status
-from api.public.debate.models import Debate, DebateCreate, DebateUpdate, DebateRead
-from api.public.tag.models import Tag
+from api.public.debate.models import Debate, DebateCreate, DebateUpdate, DebateRead, DebateType, DebateChangeLog
+from api.public.country.models import Country
 from api.public.user.models import User
+from api.public.tag.models import Tag
+from sqlalchemy.orm import joinedload
+
+def generate_slug(title: str, db: Session) -> str:
+    slug_base = slugify(title)
+    # Verify if the slug already exists
+    slug = slug_base
+    counter = 1
+    while db.exec(select(Debate).where(Debate.slug == slug)).first():
+        slug = f"{slug_base}-{counter}"
+        counter += 1
+    return slug
+
+def get_all_debates(db: Session) -> list[DebateRead]:
+    debates = db.exec(select(Debate)).all()
+    return [DebateRead.from_debate(debate) for debate in debates]
+
+def get_debate(slug: str, db: Session) -> DebateRead:
+    debate = db.exec(select(Debate).where(Debate.slug == slug)).first()
+    if not debate:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Debate not found")
+    db.refresh(debate)
+    username = debate.creator.username if debate.creator else "Unknown"
+    return DebateRead.from_debate(debate, username)
+
+def get_debates_by_type(debate_type: str, db: Session) -> list[DebateRead]:
+    debates = db.exec(
+        select(Debate)
+        .options(joinedload(Debate.creator))
+        .where(Debate.type == debate_type)
+    ).all()
+    print("===DEBATES===: ", debates)
+    return [
+        DebateRead.from_debate(debate, debate.creator.username if debate.creator else "Unknown")
+        for debate in debates
+    ]
 
 def create_debate(debate: DebateCreate, db: Session) -> Debate:
-    # db_debate = Debate.model_validate(debate)
+    slug = generate_slug(debate.title, db)
+    print("======SLUG======: ", slug)
     db_debate = Debate(
-        type=debate.type,
         title=debate.title,
+        slug=slug,
         description=debate.description,
-        image_url=debate.image_url,
+        type=debate.type,
         public=debate.public,
         status=debate.status,
-        views_count=debate.views_count,
-        likes_count=debate.likes_count,
-        dislikes_count=debate.dislikes_count,
-        comments_count=debate.comments_count,
-        points_of_view_count=debate.points_of_view_count,
-        is_featured=debate.is_featured,
-        is_locked=debate.is_locked,
-        last_comment_at=debate.last_comment_at,
-        is_flagged=debate.is_flagged,
-        moderator_notes=debate.moderator_notes,
-        locked_by=debate.locked_by,
-        archived_at=debate.archived_at,
         language=debate.language,
-        min_characters_per_comment=debate.min_characters_per_comment,
-        max_characters_per_comment=debate.max_characters_per_comment,
         creator_id=debate.creator_id,
-        community_id=debate.community_id
+        images=json.dumps(debate.images)
     )
-    
-    
-    # Find or create tags and associate them with the debate
-    tags = []
-    for tag_name in debate.tags:
-        tag = db.exec(select(Tag).where(Tag.name == tag_name)).first()
-        if not tag:
-            # Create the tag if it does not exist
-            tag = Tag(name=tag_name)
-            db.add(tag)
-            db.commit()
-            db.refresh(tag)
-        tags.append(tag)
 
-    db_debate.tags = tags  # Assigning tags found or created to the discussion
+    if debate.tags:
+        tags = db.exec(select(Tag).where(Tag.name.in_(debate.tags))).all()
+        if len(tags) != len(debate.tags):
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Some tags do not exist")
+        db_debate.tags = tags   
+
+    if debate.type == DebateType.INTERNATIONAL and hasattr(debate, 'countries_involved'):
+        countries = db.exec(select(Country).where(Country.name.in_(debate.countries_involved))).all()
+        db_debate.countries_involved = countries
+
     db.add(db_debate)
     db.commit()
     db.refresh(db_debate)
+
     return db_debate
 
-def get_all_debates(db: Session) -> list[Debate]:
-    results = db.exec(select(Debate))
-    return results
-
-def get_debate(debate_id: int, db: Session) -> Debate:
+def update_debate(
+    debate_id: int,
+    debate_update: DebateUpdate,
+    db: Session,
+    current_user: User
+) -> Debate:
     debate = db.get(Debate, debate_id)
     if not debate:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Debate not found")
-    return debate
 
-def get_debates_by_type(debate_type: str, db: Session) -> list[Debate]:
-    # Realiza un join entre Debate y User para obtener el username del creador
-    # global_debates = select(Debate)
-    statement = select(Debate, User.username).join(User, Debate.creator_id == User.id).where(Debate.type == debate_type)
-    results = db.exec(statement)
+    # Verificar si el usuario tiene permiso para actualizar el debate
+    if debate.creator_id != current_user.id and not current_user.is_admin:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not enough privileges")
 
-    # Crea una lista de debates con el username del creador
-    debates = []
-    for debate, username in results:
-        debate_data = DebateRead.model_validate(debate)
-        debate_data.creator_username = username  # Asigna el username al modelo
-        debates.append(debate_data)
+    # Registro de cambios
+    change_logs = []
 
-    return debates
+    for key, value in debate_update.dict(exclude_unset=True).items():
+        old_value = getattr(debate, key)
+        if old_value != value:
+            setattr(debate, key, value)
+            change_log = DebateChangeLog(
+                debate_id=debate.id,
+                changed_by_id=current_user.id,
+                changed_at=datetime.utcnow(),
+                field_changed=key,
+                old_value=json.dumps(old_value) if isinstance(old_value, (dict, list)) else str(old_value),
+                new_value=json.dumps(value) if isinstance(value, (dict, list)) else str(value),
+                reason="User update"
+            )
+            change_logs.append(change_log)
 
-def get_global_debates(db: Session) -> list[Debate]:
-    return get_debates_by_type("global", db)
+    debate.updated_at = datetime.utcnow()
 
-def get_international_debates(db: Session) -> list[Debate]:
-    return get_debates_by_type("international", db)
-
-def get_national_debates(db: Session) -> list[Debate]:
-    return get_debates_by_type("national", db)
-
-def get_local_debates(db: Session) -> list[Debate]:
-    return get_debates_by_type("local", db)
-
-def update_debate(debate_id: int, debate_update: DebateUpdate, db: Session) -> Debate:
-    debate = db.get(Debate, debate_id)
-    if not debate:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Debate not found")
-    debate_data = debate_update.dict(exclude_unset=True)
-    for key, value in debate_data.items():
-        setattr(debate, key, value)
+    db.add_all(change_logs)
     db.add(debate)
     db.commit()
     db.refresh(debate)

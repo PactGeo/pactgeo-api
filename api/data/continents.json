@@ -1,8 +1,8 @@
 [
-    { "name": "Africa", "description": "Continent" },
-    { "name": "America", "description": "Continent" },
-    { "name": "Asia", "description": "Continent" },
-    { "name": "Europe", "description": "Continent" },
-    { "name": "Oceania", "description": "Continent" },
-    { "name": "Antarctica", "description": "Continent" }
+    { "name": "Africa", "description": "Continent description" },
+    { "name": "America", "description": "Continent description" },
+    { "name": "Asia", "description": "Continent description" },
+    { "name": "Europe", "description": "Continent description" },
+    { "name": "Oceania", "description": "Continent description" },
+    { "name": "Antarctica", "description": "Continent description" }
 ]

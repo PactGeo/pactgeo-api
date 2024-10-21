@@ -1,3 +1,4 @@
+from typing import Optional
 from sqlmodel import Field, Relationship, SQLModel
 
 from api.public.team.models import Team
@@ -20,9 +21,8 @@ class HeroBase(SQLModel):
             }
         }
 
-
 class Hero(HeroBase, table=True):
-    id: int | None = Field(default=None, primary_key=True)
+    id: Optional[int] = Field(default=None, primary_key=True)
     teams: list[Team] = Relationship(back_populates="heroes", link_model=HeroTeamLink)
 
 
