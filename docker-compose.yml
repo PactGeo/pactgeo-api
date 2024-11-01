@@ -13,9 +13,9 @@ services:
   db:
     image: postgres:14
     environment:
-      - POSTGRES_USER=seba
-      - POSTGRES_PASSWORD=123456
-      - POSTGRES_DB=geounity_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=dHeiAMxVgVPsWIPwELWiZSpPnFYvbAau
+      - POSTGRES_DB=railway
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     networks:
