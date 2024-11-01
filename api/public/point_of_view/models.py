@@ -1,6 +1,7 @@
 from datetime import datetime
 from typing import Optional
 from sqlmodel import Field, Relationship, SQLModel
+from pydantic import ConfigDict
 from api.public.subdivision.models import Subdivision
 from api.public.user.models import UserPublic
 
@@ -31,9 +32,7 @@ class PointOfViewRead(SQLModel):
     created_at: datetime
     created_by_id: int
     opinions: list["OpinionRead"] = []
-
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
 
 class Opinion(SQLModel, table=True):
     id: Optional[int]  = Field(default=None, primary_key=True)
@@ -56,9 +55,8 @@ class OpinionRead(SQLModel):
     upvotes: int
     downvotes: int
     score: int
-
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
+    
 class OpinionCreate(SQLModel):
     content: str
     country: Optional[str] = None

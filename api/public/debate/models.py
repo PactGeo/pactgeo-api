@@ -81,27 +81,6 @@ class Debate(DebateBase, table=True):
 
     change_logs: list["DebateChangeLog"] = Relationship(back_populates="debate")
 
-    class Config:
-        json_schema_extra = {
-            "example": {
-                "id": 1,
-                "creator_id": 1,
-                "title": "Is climate change real?",
-                "description": "A debate about climate change",
-                "public": True,
-                "type": "GLOBAL",
-                "tags": ["climate", "change", "global"],
-                "created_at": "2021-08-01T12:00:00",
-                "updated_at": "2021-08-01T12:00:00",
-                "deleted_at": None,
-                "views_count": 0,
-                "likes_count": 0,
-                "dislikes_count": 0,
-                "language": "en",
-                "status": "open"
-            }
-        }
-
 # Create model for creating a new debate
 class DebateCreate(DebateBase):
     type: DebateType

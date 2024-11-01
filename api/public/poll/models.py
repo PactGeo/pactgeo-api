@@ -5,7 +5,7 @@ from datetime import datetime
 from enum import Enum
 from sqlmodel import SQLModel, Field, Relationship
 from sqlalchemy import Column, Enum as SQLAlchemyEnum, UniqueConstraint
-from pydantic import BaseModel, ConfigDict
+from pydantic import ConfigDict
 from api.public.tag.models import Tag
 from api.utils.generic_models import PollTagLink
 
@@ -36,7 +36,7 @@ class Poll(PollBase, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     slug: str = Field(index=True, unique=True)
     creator_id: int = Field(foreign_key="users.id")
-    community_id: int = Field(foreign_key="communities.id")
+    community_id: int = Field(foreign_key="community.id")
     status: PollStatus = Field(
         default=PollStatus.ACTIVE,
         sa_column=Column(
@@ -105,23 +105,23 @@ class Vote(SQLModel, table=True):
     user: Optional["User"] = Relationship(back_populates="poll_votes")
 
 # Pydantic Models for Validation and Response
-class PollOptionCreate(BaseModel):
+class PollOptionCreate(SQLModel):
     text: str
 
-class PollUpdate(BaseModel):
+class PollUpdate(SQLModel):
     title: Optional[str] = None
     description: Optional[str] = None
     status: Optional[PollStatus] = None
     ends_at: Optional[datetime] = None
 
-class PollOptionRead(BaseModel):
+class PollOptionRead(SQLModel):
     id: int
     poll_id: int
     text: str
     votes: int
     model_config = ConfigDict(from_attributes=True)
 
-class PollRead(BaseModel):
+class PollRead(SQLModel):
     id: int
     slug: str
     title: str
@@ -144,16 +144,16 @@ class PollRead(BaseModel):
     comments_count: int
     model_config = ConfigDict(from_attributes=True)
 
-class VoteRequest(BaseModel):
+class VoteRequest(SQLModel):
     option_ids: list[int]
 
-class PollOptionResult(BaseModel):
+class PollOptionResult(SQLModel):
     option_id: int
     text: str
     votes: int
     percentage: float
 
-class PollResults(BaseModel):
+class PollResults(SQLModel):
     poll_id: int
     title: str
     description: Optional[str]
@@ -186,10 +186,10 @@ class PollComment(SQLModel, table=True):
     poll: Optional[Poll] = Relationship(back_populates="comments")
     user: Optional["User"] = Relationship(back_populates="poll_comments")
 
-class CommentCreate(BaseModel):
+class CommentCreate(SQLModel):
     content: str
 
-class CommentRead(BaseModel):
+class CommentRead(SQLModel):
     id: int
     poll_id: int
     user_id: int
@@ -198,5 +198,5 @@ class CommentRead(BaseModel):
     created_at: datetime
     model_config = ConfigDict(from_attributes=True)
 
-class ReactionRequest(BaseModel):
+class ReactionRequest(SQLModel):
     reaction_type: ReactionType

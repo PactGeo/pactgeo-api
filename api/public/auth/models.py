@@ -1,7 +1,7 @@
 from typing import Optional
-from pydantic import BaseModel
+from sqlmodel import SQLModel
 
-class TokenRequest(BaseModel):
+class TokenRequest(SQLModel):
     provider: str
     providerAccountId: str
     email: Optional[str] = None

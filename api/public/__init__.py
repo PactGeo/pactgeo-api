@@ -1,9 +1,6 @@
 from fastapi import APIRouter, Depends
 
 from api.public.auth import views as auth
-from api.public.health import views as health
-from api.public.hero import views as heroes
-from api.public.team import views as teams
 from api.public.user import views as users
 from api.public.community import views as communities
 from api.public.debate import views as debates
@@ -21,22 +18,6 @@ api.include_router(
     auth.router,
     prefix="/auth",
     tags=["Auth"],
-)
-api.include_router(
-    health.router,
-    prefix="/health",
-    tags=["Health"],
-    dependencies=[Depends(get_current_user)],
-)
-api.include_router(
-    heroes.router,
-    prefix="/heroes",
-    tags=["Heroes"],
-)
-api.include_router(
-    teams.router,
-    prefix="/teams",
-    tags=["Teams"],
 )
 api.include_router(
     communities.router,

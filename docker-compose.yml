@@ -1,0 +1,28 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    env_file:
+      - .env
+    networks:
+      - app-network
+
+  db:
+    image: postgres:14
+    environment:
+      - POSTGRES_USER=seba
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=geounity_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    networks:
+      - app-network
+
+volumes:
+  postgres_data:
+
+networks:
+  app-network:

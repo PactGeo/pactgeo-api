@@ -1,6 +1,7 @@
 from enum import Enum
 from typing import Optional
 from datetime import datetime
+from pydantic import ConfigDict
 from sqlmodel import Field, Relationship, SQLModel
 from api.utils.generic_models import UserCommunityLink
 
@@ -12,14 +13,20 @@ class UserRole(str, Enum):
 
 
 class UserBase(SQLModel):
-    name: Optional[str] = Field(None, max_length=100)
+    username: Optional[str] = Field(
+        max_length=50,
+        regex=r"^[a-zA-Z0-9_]+$",
+        index=True,
+        unique=True,
+        nullable=True
+    )
     email: str = Field(
-        ...,
         max_length=100,
         regex=r"^\S+@\S+\.\S+$",
         unique=True,
         index=True,
     )
+    name: Optional[str] = Field(None, max_length=100)
     emailVerified: Optional[datetime] = None
     image: Optional[str] = Field(
         None,
@@ -30,14 +37,6 @@ class UserBase(SQLModel):
     gender: Optional[str] = Field(None, max_length=20, nullable=True)
     isActive: bool = Field(default=True, nullable=True)
     role: UserRole = Field(default=UserRole.USER, nullable=True)
-    username: Optional[str] = Field(
-        ...,
-        max_length=50,
-        regex=r"^[a-zA-Z0-9_]+$",
-        index=True,
-        unique=True,
-        nullable=True
-    )
     
 class User(UserBase, table=True):
     __tablename__ = "users"
@@ -92,18 +91,13 @@ class UserRead(UserBase):
     id: int
     username: str
     email: Optional[str] = None
-
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
 
 class UserPublic(SQLModel):
     id: int
     username: str
     image: Optional[str] = None
-
-    class Config:
-        orm_mode = True
-
+    model_config = ConfigDict(from_attributes=True)
 
 class UserUpdate(UserBase):
     image: Optional[str] = Field(None, max_length=100)

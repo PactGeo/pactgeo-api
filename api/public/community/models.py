@@ -1,20 +1,14 @@
-from datetime import datetime
-from typing import Optional, TYPE_CHECKING
+from typing import Optional
 from sqlmodel import Field, Relationship, SQLModel
 from api.utils.generic_models import UserCommunityLink
-
-if TYPE_CHECKING:
-    from api.public.user.models import User
-    from api.public.poll.models import Poll
 
 class CommunityBase(SQLModel):
     name: str
     type: str
     description: Optional[str] = None
-    parent_id: Optional[int] = Field(default=None, foreign_key="communities.id")
+    parent_id: Optional[int] = Field(default=None, foreign_key="community.id")
 
 class Community(CommunityBase, table=True):
-    __tablename__ = "communities"
     id: Optional[int] = Field(default=None, primary_key=True)
 
     # Relaciones
