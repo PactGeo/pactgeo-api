@@ -38,3 +38,4 @@ class Country(SQLModel, table=True):
     continent: Optional["Continent"] = Relationship(back_populates="countries")
     subnations: list["Subnation"] = Relationship(back_populates="country")
     debates: list["Debate"] = Relationship(back_populates="countries_involved", link_model=DebateCountryInvolvedLink)
+    points_of_view: list["PointOfView"] = Relationship(back_populates="country")

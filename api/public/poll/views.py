@@ -51,7 +51,7 @@ def create(
     db: Session = Depends(get_session),
     current_user: User = Depends(get_current_user)
 ):
-    print('############################################ POLL ############################################')
+    print('############################################ POLL CREATE ############################################')
     print(poll)
     return create_poll(poll, db, current_user)
 

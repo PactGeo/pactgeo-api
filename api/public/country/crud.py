@@ -2,9 +2,10 @@
 from typing import Optional
 from sqlmodel import Session, select
 from api.public.country.models import Country
+from sqlalchemy import func
 
 def get_country_by_name(session: Session, name: str) -> Optional[Country]:
-    statement = select(Country).where(Country.name == name)
+    statement = select(Country).where(func.lower(Country.name) == func.lower(name))
     result = session.exec(statement).first()
     return result
 

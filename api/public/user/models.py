@@ -44,13 +44,14 @@ class User(UserBase, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     country_id: Optional[int] = Field(foreign_key="country.id")
 
-
     #Relations
     accounts: list["Accounts"] = Relationship(back_populates="user")
+    opinion_votes: list["OpinionVote"] = Relationship(back_populates="user")
     polls: list["Poll"] = Relationship(back_populates="creator")
-    votes: list["Vote"] = Relationship(back_populates="user")
+    poll_votes: list["Vote"] = Relationship(back_populates="user")
     poll_reactions: list["PollReaction"] = Relationship(back_populates="user")
     poll_comments: list["PollComment"] = Relationship(back_populates="user")
+    opinions: list["Opinion"] = Relationship(back_populates="user")
 
     created_at: datetime = Field(default_factory=datetime.utcnow, index=True, nullable=True)
     updated_at: Optional[datetime] = Field(default=None)
@@ -89,6 +90,19 @@ class UserCreate(UserBase):
 
 class UserRead(UserBase):
     id: int
+    username: str
+    email: Optional[str] = None
+
+    class Config:
+        orm_mode = True
+
+class UserPublic(SQLModel):
+    id: int
+    username: str
+    image: Optional[str] = None
+
+    class Config:
+        orm_mode = True
 
 
 class UserUpdate(UserBase):

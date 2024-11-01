@@ -7,8 +7,10 @@ from api.public.debate.crud import (
     update_debate,
     delete_debate,
     get_debates_by_type,
+    add_opinion_to_debate
 )
 from api.public.debate.models import DebateCreate, DebateRead, DebateUpdate
+from api.public.point_of_view.models import OpinionCreate, OpinionRead
 from api.database import get_session
 from api.public.debate.crud import get_all_debates
 from api.public.dependencies import get_current_user
@@ -27,13 +29,38 @@ def read_debates(
         return get_debates_by_type(debate_type, db)
     return get_all_debates(db)
 
+@router.get("/global", response_model=list[DebateRead])
+def read_debates_global(
+    db: Session = Depends(get_session)
+):
+    return get_debates_by_type('GLOBAL', db)
+
 @router.get("/{slug}", response_model=DebateRead)
 def read_debate(slug: str, db: Session = Depends(get_session)):
     return get_debate(slug, db)
 
+@router.post("/{debate_id}/opinion", response_model=OpinionRead, status_code=status.HTTP_201_CREATED)
+def add_opinion(
+    debate_id: int,
+    opinion: OpinionCreate,
+    db: Session = Depends(get_session),
+    current_user: User = Depends(get_current_user)
+):
+    print('===========================add_opinion==')
+    print(debate_id)
+    print(opinion)
+    print(current_user)
+    result = add_opinion_to_debate(debate_id, opinion, db, current_user)
+    return result
+
 @router.post("/", response_model=DebateRead, status_code=status.HTTP_201_CREATED)
-def create(debate: DebateCreate, db: Session = Depends(get_session)):
-    return create_debate(debate, db)
+def create(
+    debate: DebateCreate,
+    db: Session = Depends(get_session),
+    current_user: User = Depends(get_current_user)
+):
+    db_debate = create_debate(debate, db, current_user)
+    return DebateRead.from_debate(db_debate, current_user.username)
 
 
 @router.patch("/{debate_id}", response_model=DebateRead)

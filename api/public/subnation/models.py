@@ -17,8 +17,7 @@ class Subnation(SQLModel, table=True):
 
     country_id: Optional[int] = Field(default=None, foreign_key="country.id", description="Foreign key to the parent country")
 
-    # Relationship with Country
     country: Optional["Country"] = Relationship(back_populates="subnations")
-
-    # Relationship with Debates
     debates: list["Debate"] = Relationship(back_populates="subnations_involved", link_model=DebateSubnationInvolvedLink)
+    subdivisions: list["Subdivision"] = Relationship(back_populates="subnation")
+    points_of_view: list["PointOfView"] = Relationship(back_populates="subnation")

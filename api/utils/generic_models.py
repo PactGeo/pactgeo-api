@@ -1,9 +1,10 @@
-from typing import Optional
-from sqlmodel import Field, Relationship, SQLModel
+from sqlmodel import Field, SQLModel
 class HeroTeamLink(SQLModel, table=True):
     team_id: int | None = Field(default=None, foreign_key="team.id", primary_key=True)
     hero_id: int | None = Field(default=None, foreign_key="hero.id", primary_key=True)
-
+class PollTagLink(SQLModel, table=True):
+    poll_id: int | None = Field(default=None, foreign_key="poll.id", primary_key=True)
+    tag_id: int | None = Field(default=None, foreign_key="tag.id", primary_key=True)
 class DebateTagLink(SQLModel, table=True):
     debate_id: int | None = Field(default=None, foreign_key="debate.id", primary_key=True)
     tag_id: int | None = Field(default=None, foreign_key="tag.id", primary_key=True)

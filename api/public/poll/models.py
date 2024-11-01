@@ -6,7 +6,8 @@ from enum import Enum
 from sqlmodel import SQLModel, Field, Relationship
 from sqlalchemy import Column, Enum as SQLAlchemyEnum, UniqueConstraint
 from pydantic import BaseModel, ConfigDict
-
+from api.public.tag.models import Tag
+from api.utils.generic_models import PollTagLink
 
 # Enums
 class PollType(str, Enum):
@@ -32,7 +33,6 @@ class PollBase(SQLModel):
     ends_at: Optional[datetime] = None
 
 class Poll(PollBase, table=True):
-    __tablename__ = "polls"
     id: Optional[int] = Field(default=None, primary_key=True)
     slug: str = Field(index=True, unique=True)
     creator_id: int = Field(foreign_key="users.id")
@@ -47,6 +47,7 @@ class Poll(PollBase, table=True):
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 
+    tags: list[Tag] = Relationship(back_populates="polls", link_model=PollTagLink)
     creator: Optional["User"] = Relationship(back_populates="polls")
     community: Optional["Community"] = Relationship(back_populates="polls")
     options: list["PollOption"] = Relationship(back_populates="poll")
@@ -67,34 +68,11 @@ class Poll(PollBase, table=True):
         if self.reactions:
             return sum(1 for reaction in self.reactions if reaction.reaction_type == ReactionType.DISLIKE)
         return 0
+    @property
+    def comments_count(self) -> int:
+        return len(self.comments) if self.comments else 0
 
-class PollOption(SQLModel, table=True):
-    __tablename__ = "poll_options"
-    id: Optional[int] = Field(default=None, primary_key=True)
-    text: str
-    votes: int = Field(default=0)
-    poll_id: int = Field(foreign_key="polls.id")
-
-    poll: Optional[Poll] = Relationship(back_populates="options")
-    votes_rel: list["Vote"] = Relationship(back_populates="option")
-
-class Vote(SQLModel, table=True):
-    __tablename__ = "votes"
-    id: Optional[int] = Field(default=None, primary_key=True)
-    poll_id: int = Field(foreign_key="polls.id")
-    option_id: int = Field(foreign_key="poll_options.id")
-    user_id: int = Field(foreign_key="users.id")
-    voted_at: datetime = Field(default_factory=datetime.utcnow)
-
-    poll: Optional[Poll] = Relationship(back_populates="votes")
-    option: Optional[PollOption] = Relationship(back_populates="votes_rel")
-    user: Optional["User"] = Relationship(back_populates="votes")
-
-# Pydantic Models for Validation and Response
-class PollOptionCreate(BaseModel):
-    text: str
-
-class PollCreate(BaseModel):
+class PollCreate(PollBase):
     title: str
     description: Optional[str] = None
     poll_type: PollType
@@ -103,6 +81,32 @@ class PollCreate(BaseModel):
     community_id: int
     status: PollStatus = PollStatus.ACTIVE
     options: list[str]
+    tags: list[str] = []
+class PollOption(SQLModel, table=True):
+    __tablename__ = "poll_options"
+    id: Optional[int] = Field(default=None, primary_key=True)
+    text: str
+    votes: int = Field(default=0)
+    poll_id: int = Field(foreign_key="poll.id")
+
+    poll: Optional[Poll] = Relationship(back_populates="options")
+    votes_rel: list["Vote"] = Relationship(back_populates="option")
+
+class Vote(SQLModel, table=True):
+    __tablename__ = "votes"
+    id: Optional[int] = Field(default=None, primary_key=True)
+    poll_id: int = Field(foreign_key="poll.id")
+    option_id: int = Field(foreign_key="poll_options.id")
+    user_id: int = Field(foreign_key="users.id")
+    voted_at: datetime = Field(default_factory=datetime.utcnow)
+
+    poll: Optional[Poll] = Relationship(back_populates="votes")
+    option: Optional[PollOption] = Relationship(back_populates="votes_rel")
+    user: Optional["User"] = Relationship(back_populates="poll_votes")
+
+# Pydantic Models for Validation and Response
+class PollOptionCreate(BaseModel):
+    text: str
 
 class PollUpdate(BaseModel):
     title: Optional[str] = None
@@ -128,6 +132,7 @@ class PollRead(BaseModel):
     created_at: datetime
     updated_at: datetime
     ends_at: Optional[datetime] = None
+    tags: list[str] = []
     creator_id: int
     creator_username: str
     community_id: int
@@ -135,6 +140,8 @@ class PollRead(BaseModel):
     likes_count: int
     dislikes_count: int
     user_voted_options: list[int] = []
+    user_reaction_type: Optional[ReactionType] = None
+    comments_count: int
     model_config = ConfigDict(from_attributes=True)
 
 class VoteRequest(BaseModel):
@@ -156,7 +163,7 @@ class PollResults(BaseModel):
 class PollReaction(SQLModel, table=True):
     __tablename__ = "poll_reactions"
     id: Optional[int] = Field(default=None, primary_key=True)
-    poll_id: int = Field(foreign_key="polls.id")
+    poll_id: int = Field(foreign_key="poll.id")
     user_id: int = Field(foreign_key="users.id")
     reaction_type: ReactionType
     reacted_at: datetime = Field(default_factory=datetime.utcnow)
@@ -171,7 +178,7 @@ class PollReaction(SQLModel, table=True):
 class PollComment(SQLModel, table=True):
     __tablename__ = "poll_comments"
     id: Optional[int] = Field(default=None, primary_key=True)
-    poll_id: int = Field(foreign_key="polls.id")
+    poll_id: int = Field(foreign_key="poll.id")
     user_id: int = Field(foreign_key="users.id")
     content: str
     created_at: datetime = Field(default_factory=datetime.utcnow)

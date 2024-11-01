@@ -2,14 +2,14 @@ from enum import Enum
 from typing import Optional
 from datetime import datetime
 from sqlmodel import Field, Relationship, SQLModel
+from sqlalchemy import Column, JSON, BigInteger
 from api.public.tag.models import Tag
 from api.public.country.models import Country
 from api.public.subnation.models import Subnation
-from api.public.user.models import User
+from api.public.user.models import User, UserPublic
 from api.utils.generic_models import DebateTagLink
 from api.utils.generic_models import DebateCountryInvolvedLink, DebateSubnationInvolvedLink
-from api.public.point_of_view.models import PointOfView
-from sqlalchemy import Column, JSON, BigInteger
+from api.public.point_of_view.models import PointOfViewRead, OpinionRead
 
 class DebateType(str, Enum):
     GLOBAL = "GLOBAL"
@@ -28,7 +28,7 @@ class LanguageCode(str, Enum):
     EN = "en"
     ES = "es"
     FR = "fr"
-    
+
 # Base model with common fields for Debate
 class DebateBase(SQLModel):
     description: Optional[str] = Field(default=None, description="Description of the debate")
@@ -104,7 +104,6 @@ class Debate(DebateBase, table=True):
 
 # Create model for creating a new debate
 class DebateCreate(DebateBase):
-    creator_id: int
     type: DebateType
     tags: list[str] = []
     images: list[str] = []
@@ -122,8 +121,8 @@ class DebateRead(DebateBase):
     tags: list[str] = []
     countries_involved: list[str] = []
     subnations_involved: list[str] = []
-    points_of_view: list[PointOfView] = []
     images: list[str]
+    points_of_view: list[PointOfViewRead] = []
 
     @classmethod
     def from_debate(cls, debate: Debate, username: str) -> "DebateRead":
@@ -147,7 +146,41 @@ class DebateRead(DebateBase):
             dislikes_count=debate.dislikes_count,
             language=debate.language,
             status=debate.status,
-            images=debate.get_images()
+            images=debate.images,
+            points_of_view=[
+                PointOfViewRead(
+                    id=pov.id,
+                    name=pov.name,
+                    debate_id=pov.debate_id,
+                    country_id=pov.country_id,
+                    subnation_id=pov.subnation_id,
+                    subdivision_id=pov.subdivision_id,
+                    created_at=pov.created_at,
+                    created_by_id=pov.created_by_id,
+                    opinions=sorted(
+                        [
+                            OpinionRead(
+                                id=opinion.id,
+                                point_of_view_id=opinion.point_of_view_id,
+                                content=opinion.content,
+                                created_at=opinion.created_at,
+                                user=UserPublic(
+                                    id=opinion.user.id,
+                                    username=opinion.user.username,
+                                    image=opinion.user.image,
+                                ),
+                                upvotes=sum(1 for vote in opinion.votes if vote.value == 1),
+                                downvotes=sum(1 for vote in opinion.votes if vote.value == -1),
+                                score=sum(vote.value for vote in opinion.votes)
+                            )
+                            for opinion in pov.opinions
+                        ],
+                        key=lambda o: o.score,
+                        reverse=True
+                    )
+                )
+                for pov in debate.points_of_view
+            ]
         )
 
 # Update model for updating an existing debate

@@ -55,16 +55,26 @@ def get_all_polls(db: Session, current_user: Optional[User]) -> list[PollRead]:
         votes_by_poll = {}
         for vote in user_votes:
             votes_by_poll.setdefault(vote.poll_id, []).append(vote.option_id)
+        user_reactions = db.exec(
+            select(PollReaction)
+            .where(PollReaction.poll_id.in_(poll_ids), PollReaction.user_id == current_user.id)
+        ).all()
+        reactions_by_poll = {reaction.poll_id: reaction.reaction_type for reaction in user_reactions}
     else:
         votes_by_poll = {}
+        reactions_by_poll = {}
     for poll in polls:
         likes = sum(1 for reaction in poll.reactions if reaction.reaction_type == ReactionType.LIKE)
         dislikes = sum(1 for reaction in poll.reactions if reaction.reaction_type == ReactionType.DISLIKE)
         user_voted_option_ids = votes_by_poll.get(poll.id, [])
+        user_reaction_type = reactions_by_poll.get(poll.id)
+        comments_count = len(poll.comments) if poll.comments else 0
         poll_read = PollRead.model_validate(poll)
         poll_read.likes_count = likes
         poll_read.dislikes_count = dislikes
         poll_read.user_voted_options = user_voted_option_ids
+        poll_read.user_reaction_type = user_reaction_type
+        poll_read.comments_count = comments_count
         poll_reads.append(poll_read)
     return poll_reads
 
@@ -250,7 +260,24 @@ def vote_in_poll(
             option.votes -= 1
             db.add(option)
             db.commit()
-            return {"detail": "Vote canceled successfully"}
+            updated_options = db.exec(
+                select(PollOption)
+                .where(PollOption.poll_id == poll_id)
+            ).all()
+
+            # Serialize the options to return them
+            options_data = [
+                {
+                    "id": option.id,
+                    "text": option.text,
+                    "votes": option.votes
+                }
+                for option in updated_options
+            ]
+            return {
+                "detail": "Vote canceled successfully",
+                "options": options_data
+            }
         else:
             # Change the vote
             # Eliminar el voto anterior si existe
@@ -270,7 +297,24 @@ def vote_in_poll(
             option.votes += 1
             db.add(option)
             db.commit()
-            return {"detail": "Vote updated successfully"}
+            updated_options = db.exec(
+                select(PollOption)
+                .where(PollOption.poll_id == poll_id)
+            ).all()
+
+            # Serialize the options to return them
+            options_data = [
+                {
+                    "id": option.id,
+                    "text": option.text,
+                    "votes": option.votes
+                }
+                for option in updated_options
+            ]
+            return {
+                "detail": "Vote updated successfully",
+                "options": options_data
+            }
     elif poll.poll_type == PollType.MULTIPLE_CHOICE:
         # Procesar cada opción seleccionada
         for option_id in poll_option_ids:
@@ -362,19 +406,19 @@ def react_to_poll(
 
     if existing_reaction:
         if existing_reaction.reaction_type == reaction_request.reaction_type:
-            # Cancelar reacción
+            # Cancel the reaction
             db.delete(existing_reaction)
             db.commit()
             return {"detail": "Reaction canceled successfully"}
         else:
-            # Actualizar reacción
+            # Update the reaction
             existing_reaction.reaction_type = reaction_request.reaction_type
             existing_reaction.reacted_at = datetime.utcnow()
             db.add(existing_reaction)
             db.commit()
             return {"detail": "Reaction updated successfully"}
     else:
-        # Añadir nueva reacción
+        # Add a new reaction
         new_reaction = PollReaction(
             poll_id=poll_id,
             user_id=current_user.id,
@@ -417,6 +461,7 @@ def get_comments_for_poll(poll_id: int, db: Session) -> list[CommentRead]:
         select(PollComment)
         .options(joinedload(PollComment.user))
         .where(PollComment.poll_id == poll_id)
+        .order_by(PollComment.created_at.asc())
     ).all()
     return [
         CommentRead(

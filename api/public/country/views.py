@@ -11,6 +11,16 @@ router = APIRouter()
 def read_countries(db: Session = Depends(get_session)):
     return get_all_countries(db)
 
+@router.get("/{country_name}", response_model=Country)
+def read_country_by_name(country_name: str, db: Session = Depends(get_session)):
+    country = get_country_by_name(db, country_name)
+    if not country:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="País no encontrado."
+        )
+    return country
+
 @router.post("/", response_model=Country, status_code=status.HTTP_201_CREATED)
 def create_new_country(country_data: Country, session: Session = Depends(get_session)):
     existing_country = get_country_by_name(session, country_data.name)

@@ -14,6 +14,5 @@ class Subdivision(SQLModel, table=True):
     subnation_id: Optional[int] = Field(default=None, foreign_key="subnation.id", description="Foreign key to the parent subnation")
     country_id: Optional[int] = Field(default=None, foreign_key="country.id", description="Foreign key to the parent country")
 
-    # Relationships with Subnation and Country
     subnation: Optional["Subnation"] = Relationship(back_populates="subdivisions")
-    country: Optional["Country"] = Relationship(back_populates="subdivisions")
+    points_of_view: list["PointOfView"] = Relationship(back_populates="subdivision")

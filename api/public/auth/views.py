@@ -1,9 +1,15 @@
 from fastapi import APIRouter, Depends
 from api.public.user.models import User
-from api.auth import authenticate_github
+from api.auth import authenticate_github, authenticate_google
 from api.public.dependencies import get_current_user
 
 router = APIRouter()
+
+@router.post("/google")
+async def google_auth(token: str = Depends(authenticate_google)):
+    print('======= github_google =======')
+    print('token:', token)
+    return {"access_token": token, "token_type": "bearer"}
 
 @router.post("/github")
 async def github_auth(token: str = Depends(authenticate_github)):

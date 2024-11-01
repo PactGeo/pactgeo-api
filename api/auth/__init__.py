@@ -42,6 +42,16 @@ def generate_unique_username(base_username: str, session: Session):
         counter += 1
     return new_username
 
+async def validate_google_token(token: str):
+    print('======= validate_google_token =======')
+    async with httpx.AsyncClient() as client:
+        params = {'access_token': token}
+        print('params:', params)
+        response = await client.get('https://www.googleapis.com/oauth2/v1/userinfo', params=params)
+        if response.status_code == 200:
+            return response.json()
+        return None
+    
 async def validate_github_token(token: str):
     print('======= validate_github_token =======')
     async with httpx.AsyncClient() as client:
@@ -67,20 +77,21 @@ async def get_github_email(token: str):
             return primary_emails[0]['email']
         return None
     
-async def get_or_create_user(github_user: dict, session: Session):
-    # 1. Buscar si existe una Account con el provider y provider_account_id
+# async def get_or_create_user(github_user: dict, session: Session):
+async def get_or_create_user(provider_user: dict, session: Session, provider: str):
+    # 1. Search if there is an Account with the provider and provider_account_id
     statement = select(Accounts).where(
-        Accounts.provider == "github",
-        Accounts.provider_account_id == str(github_user["id"])
+        Accounts.provider == provider,
+        Accounts.provider_account_id == str(provider_user["id"])
     )
     account = session.exec(statement).first()
 
     if account:
-        # Si la cuenta existe, obtener el usuario asociado
+        # If the account exists, get the associated user
         return account.user
 
-    # 2. Si no existe la Account, buscar un User por email
-    email = github_user.get("email")
+    # 2. If the Account does not exist, search for a User by email
+    email = provider_user.get("email")
     if email:
         statement = select(User).where(User.email == email)
         user = session.exec(statement).first()
@@ -88,28 +99,26 @@ async def get_or_create_user(github_user: dict, session: Session):
         user = None
 
     if not user:
-        # 3. Si no existe el User, crearlo
-        username = github_user["login"]
+        # 3. If the User does not exist, create it
+        username = provider_user.get("login") or provider_user.get("name") or provider_user.get("email").split("@")[0]
         if not await is_username_available(username, session):
             username = generate_unique_username(username, session)
 
         user = User(
             username=username,
             email=email,
-            name=github_user.get("name"),
-            # Otros campos...
+            name=provider_user.get("name"),
         )
         session.add(user)
         session.commit()
         session.refresh(user)
 
-    # 4. Crear la nueva Account y asociarla al User
+    # 4. Create the new Account and associate it with the User
     new_account = Accounts(
         user_id=user.id,
         type="oauth",
-        provider="github",
-        provider_account_id=str(github_user["id"]),
-        # Otros campos...
+        provider=provider,
+        provider_account_id=str(provider_user["id"]),
     )
     session.add(new_account)
     session.commit()
@@ -132,6 +141,24 @@ async def authenticate_github(token: str = Depends(oauth2_scheme), session: Sess
             detail="No email associated with this GitHub account.",
         )
     github_user['email'] = email
-    user = await get_or_create_user(github_user, session)
+    user = await get_or_create_user(github_user, session, provider='github')
     access_token = create_access_token(data={"test":"foo", "sub": str(user.id)})
+    return access_token
+
+async def authenticate_google(token: str = Depends(oauth2_scheme), session: Session = Depends(get_session)):
+    google_user = await validate_google_token(token)
+    if not google_user:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid Google token",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    email = google_user.get('email')
+    if not email:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="No email associated with this Google account.",
+        )
+    user = await get_or_create_user(google_user, session, provider='google')
+    access_token = create_access_token(data={"sub": str(user.id)})
     return access_token
