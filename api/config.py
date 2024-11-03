@@ -13,14 +13,15 @@ class Settings(BaseSettings):
     API_PASSWORD: str = "123456"
     AUTH_SECRET: str = "zEV3nYEGdn/WmgqJihRfb4hcJ9NdhO8ESeUqoWgN0TU="
     JWT_SECRET: str = "1234567890"
-    DATABASE_URI: str = "postgresql://postgres:dHeiAMxVgVPsWIPwELWiZSpPnFYvbAau@autorack.proxy.rlwy.net:58133/railway"
-    CLOUDINARY_CLOUD_NAME: str
-    CLOUDINARY_API_KEY: str
-    CLOUDINARY_API_SECRET: str
+    DATABASE_URI: str = "postgresql://seba:123456@localhost/geounity_db"
+    CLOUDINARY_CLOUD_NAME: str = "geounity"
+    CLOUDINARY_API_KEY: str = "813557857562179"
+    CLOUDINARY_API_SECRET: str = "cWtbOjvAtiyTk7CJh5Zw6lKZCkQ"
 
     class Config:
-        case_sensitive = True
         env_file = ".env"
+        env_file_encoding = "utf-8"
+        case_sensitive = True
 
 settings = Settings()
 

@@ -76,6 +76,7 @@ def upgrade() -> None:
     sa.Column('status', sqlmodel.sql.sqltypes.AutoString(), nullable=True),
     sa.Column('subregion', sqlmodel.sql.sqltypes.AutoString(), nullable=True),
     sa.Column('timezone', sqlmodel.sql.sqltypes.AutoString(), nullable=True),
+    sa.Column('continent', sqlmodel.sql.sqltypes.AutoString(), nullable=True),
     sa.Column('continent_id', sa.Integer(), nullable=True),
     sa.ForeignKeyConstraint(['continent_id'], ['continent.id'], ),
     sa.PrimaryKeyConstraint('id')

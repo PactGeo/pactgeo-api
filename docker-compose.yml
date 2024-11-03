@@ -12,10 +12,6 @@ services:
 
   db:
     image: postgres:14
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=dHeiAMxVgVPsWIPwELWiZSpPnFYvbAau
-      - POSTGRES_DB=railway
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     networks:

@@ -34,12 +34,18 @@ router = APIRouter()
 @router.get("/", response_model=List[PollRead])
 def read_polls(
     community_id: Optional[int] = Query(None, description="ID of the community to filter polls"),
+    tags: Optional[list[str]] = Query(None, description="List of tags to filter polls"),
     db: Session = Depends(get_session),
     current_user: Optional[User] = Depends(get_optional_current_user)
 ):
     if community_id:
-        return get_polls_by_community(community_id, db, current_user)
-    return get_all_polls(db, current_user)
+        return get_polls_by_community(
+            community_id,
+            tags,
+            db,
+            current_user
+        )
+    return get_all_polls(tags, db, current_user)
 
 @router.get("/{poll_id}", response_model=PollRead)
 def read_poll(poll_id: int, db: Session = Depends(get_session)):

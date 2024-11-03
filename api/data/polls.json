@@ -1,0 +1,961 @@
+[
+    {
+        "title": "Should Investment in Renewable Energy be Prioritized?",
+        "description": "Climate change poses an unprecedented threat to our planet, affecting ecosystems, economies, and communities worldwide. As fossil fuel reserves dwindle and environmental concerns escalate, the debate intensifies: Should nations prioritize significant investments in renewable energy sources like solar, wind, and hydroelectric power to combat climate change and secure a sustainable future for coming generations?",
+        "type": "Binary",
+        "options": [
+            "Yes",
+            "No"
+        ],
+        "tags": [
+            {
+                "name": "Environment",
+                "id": 5
+            },
+            {
+                "name": "Energy",
+                "id": 22
+            },
+            {
+                "name": "Economy",
+                "id": 2
+            },
+            {
+                "name": "Politics",
+                "id": 1
+            },
+            {
+                "name": "Innovation",
+                "id": 12
+            },
+            {
+                "name": "Trade",
+                "id": 21
+            }
+        ],
+        "end_date": "2024-12-31"
+    },
+    {
+        "title": "What is the Greatest Environmental Challenge We Face Today?",
+        "description": "The planet is experiencing numerous environmental crises that threaten biodiversity, human health, and the stability of global economies. From escalating climate change to rampant pollution, identifying the most critical environmental challenge is essential for mobilizing resources and crafting effective solutions. Which issue do you believe poses the most immediate threat to our world?",
+        "type": "Single Choice",
+        "options": [
+            "Climate change",
+            "Air pollution",
+            "Deforestation",
+            "Loss of biodiversity",
+            "Water pollution"
+        ],
+        "tags": [
+            {
+                "name": "Environment",
+                "id": 5
+            },
+            {
+                "name": "Natural Resources",
+                "id": 18
+            },
+            {
+                "name": "Crisis",
+                "id": 17
+            },
+            {
+                "name": "Society",
+                "id": 11
+            }
+        ]
+    },
+    {
+        "title": "Actions to Reduce Economic Inequality",
+        "description": "Economic inequality has reached levels not seen in decades, leading to social unrest and hindering global development. The wealth gap between the richest and the poorest continues to widen, affecting access to education, healthcare, and opportunities. What measures should be implemented to address and reduce economic inequality across societies?",
+        "type": "Multiple Choice",
+        "options": [
+            "Implement progressive taxes",
+            "Increase minimum wage",
+            "Improve access to education",
+            "Promote gender equality in the workplace",
+            "Strengthen social welfare programs"
+        ],
+        "tags": [
+            {
+                "name": "Economy",
+                "id": 2
+            },
+            {
+                "name": "Poverty",
+                "id": 20
+            },
+            {
+                "name": "Rights and Justice",
+                "id": 7
+            },
+            {
+                "name": "Work",
+                "id": 9
+            },
+            {
+                "name": "Society",
+                "id": 11
+            },
+            {
+                "name": "Trade",
+                "id": 21
+            }
+        ],
+        "end_date": "2024-11-15"
+    },
+    {
+        "title": "Is Stricter Regulation of Social Media Necessary?",
+        "description": "Social media platforms have transformed communication, information dissemination, and even political landscapes. However, concerns about misinformation, data privacy, and the spread of harmful content have raised questions about the need for stricter regulations. Should governments enforce more rigorous controls on social media companies to protect users and society at large?",
+        "type": "Binary",
+        "options": [
+            "Yes",
+            "No"
+        ],
+        "tags": [
+            {
+                "name": "Technology",
+                "id": 4
+            },
+            {
+                "name": "Law and Legislation",
+                "id": 13
+            },
+            {
+                "name": "Rights and Justice",
+                "id": 7
+            },
+            {
+                "name": "Society",
+                "id": 11
+            },
+            {
+                "name": "Culture",
+                "id": 6
+            }
+        ]
+    },
+    {
+        "title": "Main Causes of the Refugee Crisis",
+        "description": "The global refugee crisis has displaced millions, leading to humanitarian emergencies and challenging international policies. Understanding the root causes is essential for developing effective solutions. From armed conflicts to environmental disasters, which factor do you believe is the primary driver of mass displacement today?",
+        "type": "Single Choice",
+        "options": [
+            "Armed conflicts",
+            "Climate change",
+            "Political persecution",
+            "Extreme poverty",
+            "Natural disasters"
+        ],
+        "tags": [
+            {
+                "name": "Migration",
+                "id": 16
+            },
+            {
+                "name": "Conflict",
+                "id": 15
+            },
+            {
+                "name": "Crisis",
+                "id": 17
+            },
+            {
+                "name": "Geopolitics",
+                "id": 14
+            },
+            {
+                "name": "Poverty",
+                "id": 20
+            }
+        ]
+    },
+    {
+        "title": "Measures to Combat Online Misinformation",
+        "description": "The rapid spread of misinformation online can influence elections, endanger public health, and incite social unrest. With the digital landscape constantly evolving, it's crucial to find effective strategies to combat false information. What measures should be taken to address the proliferation of misinformation on the internet?",
+        "type": "Multiple Choice",
+        "options": [
+            "Digital literacy education",
+            "Government regulation",
+            "Third-party fact-checking",
+            "Legal responsibility for platforms",
+            "Public awareness campaigns"
+        ],
+        "tags": [
+            {
+                "name": "Technology",
+                "id": 4
+            },
+            {
+                "name": "Education",
+                "id": 8
+            },
+            {
+                "name": "Society",
+                "id": 11
+            },
+            {
+                "name": "Law and Legislation",
+                "id": 13
+            },
+            {
+                "name": "Culture",
+                "id": 6
+            }
+        ],
+        "end_date": "2025-01-31"
+    },
+    {
+        "title": "Should Governments Implement Remote Work Policies?",
+        "description": "The COVID-19 pandemic has accelerated the shift towards remote work, demonstrating both its potential benefits and challenges. As we move forward, should governments promote remote work through policies and incentives, recognizing it as a viable long-term option that can improve work-life balance, reduce traffic congestion, and lower environmental impact?",
+        "type": "Binary",
+        "options": [
+            "Yes",
+            "No"
+        ],
+        "tags": [
+            {
+                "name": "Work",
+                "id": 9
+            },
+            {
+                "name": "Technology",
+                "id": 4
+            },
+            {
+                "name": "Economy",
+                "id": 2
+            },
+            {
+                "name": "Society",
+                "id": 11
+            },
+            {
+                "name": "Law and Legislation",
+                "id": 13
+            }
+        ]
+    },
+    {
+        "title": "Main Obstacles to Global Healthcare Access",
+        "description": "Access to quality healthcare remains a significant challenge in many parts of the world. Factors such as economic disparities, infrastructure limitations, and political instability contribute to this issue. Identifying the most critical obstacles can help prioritize efforts to improve global health outcomes. Which barrier do you believe is the most significant?",
+        "type": "Single Choice",
+        "options": [
+            "High costs",
+            "Lack of infrastructure",
+            "Shortage of medical staff",
+            "Geographical distances",
+            "Inadequate government policies"
+        ],
+        "tags": [
+            {
+                "name": "Health",
+                "id": 3
+            },
+            {
+                "name": "Poverty",
+                "id": 20
+            },
+            {
+                "name": "Society",
+                "id": 11
+            },
+            {
+                "name": "Rights and Justice",
+                "id": 7
+            }
+        ]
+    },
+    {
+        "title": "Priorities in Fighting the Pandemic",
+        "description": "The global response to pandemics requires coordinated efforts across various sectors. Allocating resources effectively can mean the difference between containment and widespread outbreak. In your opinion, which areas should be prioritized to strengthen our fight against current and future pandemics?",
+        "type": "Multiple Choice",
+        "options": [
+            "Vaccine development",
+            "Improving healthcare systems",
+            "Equitable distribution of medications",
+            "Scientific research",
+            "Public education campaigns"
+        ],
+        "tags": [
+            {
+                "name": "Health",
+                "id": 3
+            },
+            {
+                "name": "Crisis",
+                "id": 17
+            },
+            {
+                "name": "Innovation",
+                "id": 12
+            },
+            {
+                "name": "Society",
+                "id": 11
+            },
+            {
+                "name": "Education",
+                "id": 8
+            }
+        ]
+    },
+    {
+        "title": "Should Climate Change be a Priority on the Political Agenda?",
+        "description": "As scientific evidence mounts regarding the severe impacts of climate change, governments face pressure to act. Balancing economic interests with environmental responsibilities is a complex challenge. Do you believe that addressing climate change should be at the forefront of political discussions and policy-making?",
+        "type": "Binary",
+        "options": [
+            "Yes",
+            "No"
+        ],
+        "tags": [
+            {
+                "name": "Environment",
+                "id": 5
+            },
+            {
+                "name": "Politics",
+                "id": 1
+            },
+            {
+                "name": "Law and Legislation",
+                "id": 13
+            },
+            {
+                "name": "Society",
+                "id": 11
+            }
+        ],
+        "end_date": "2025-03-01"
+    },
+    {
+        "title": "Key Factors in Biodiversity Loss",
+        "description": "Biodiversity is essential for ecosystem resilience and human survival. However, species are disappearing at an alarming rate due to human activities. Understanding the main drivers of biodiversity loss is crucial for developing effective conservation strategies. Which factor do you consider the most detrimental to biodiversity?",
+        "type": "Single Choice",
+        "options": [
+            "Deforestation",
+            "Pollution",
+            "Climate change",
+            "Poaching",
+            "Urban expansion"
+        ],
+        "tags": [
+            {
+                "name": "Environment",
+                "id": 5
+            },
+            {
+                "name": "Natural Resources",
+                "id": 18
+            },
+            {
+                "name": "Crisis",
+                "id": 17
+            }
+        ]
+    },
+    {
+        "title": "Strategies to Improve Global Education",
+        "description": "Education is a fundamental human right and a cornerstone for sustainable development. Despite progress, millions of children and adults lack access to quality education. What strategies should be implemented to overcome barriers and enhance educational opportunities worldwide?",
+        "type": "Multiple Choice",
+        "options": [
+            "Investment in school infrastructure",
+            "Teacher training",
+            "Access to technology",
+            "Scholarship programs",
+            "Curriculum reform"
+        ],
+        "tags": [
+            {
+                "name": "Education",
+                "id": 8
+            },
+            {
+                "name": "Poverty",
+                "id": 20
+            },
+            {
+                "name": "Society",
+                "id": 11
+            },
+            {
+                "name": "Rights and Justice",
+                "id": 7
+            }
+        ]
+    },
+    {
+        "title": "Should the Use of Fossil Fuels be Abolished by 2050?",
+        "description": "Fossil fuels have powered industrial growth but at significant environmental costs. As renewable energy technologies advance, a global transition away from fossil fuels becomes more feasible. Should the international community commit to eliminating fossil fuel use by 2050 to mitigate climate change and promote sustainability?",
+        "type": "Binary",
+        "options": [
+            "Yes",
+            "No"
+        ],
+        "tags": [
+            {
+                "name": "Energy",
+                "id": 22
+            },
+            {
+                "name": "Environment",
+                "id": 5
+            },
+            {
+                "name": "Politics",
+                "id": 1
+            },
+            {
+                "name": "Economy",
+                "id": 2
+            },
+            {
+                "name": "Innovation",
+                "id": 12
+            }
+        ]
+    },
+    {
+        "title": "Main Threats to Cybersecurity",
+        "description": "In our increasingly digital world, cybersecurity threats pose significant risks to individuals, businesses, and governments. Cyberattacks can lead to financial loss, privacy breaches, and national security issues. Which cybersecurity threat do you believe is the most pressing concern today?",
+        "type": "Single Choice",
+        "options": [
+            "Ransomware attacks",
+            "Phishing",
+            "Identity theft",
+            "Cyber espionage",
+            "Malware"
+        ],
+        "tags": [
+            {
+                "name": "Cybersecurity",
+                "id": 19
+            },
+            {
+                "name": "Technology",
+                "id": 4
+            },
+            {
+                "name": "Security",
+                "id": 10
+            },
+            {
+                "name": "Society",
+                "id": 11
+            }
+        ],
+        "end_date": "2024-12-15"
+    },
+    {
+        "title": "Measures to Reduce Plastic Pollution in Oceans",
+        "description": "Plastic pollution has devastating effects on marine life, ecosystems, and even human health through the food chain. With millions of tons of plastic entering the oceans each year, urgent action is required. What measures should be taken to significantly reduce plastic pollution in our oceans?",
+        "type": "Multiple Choice",
+        "options": [
+            "Ban single-use plastics",
+            "Promote recycling",
+            "Ocean clean-ups",
+            "Environmental education",
+            "Innovation in biodegradable materials"
+        ],
+        "tags": [
+            {
+                "name": "Environment",
+                "id": 5
+            },
+            {
+                "name": "Natural Resources",
+                "id": 18
+            },
+            {
+                "name": "Crisis",
+                "id": 17
+            }
+        ]
+    },
+    {
+        "title": "Is a Universal Basic Income Necessary?",
+        "description": "The concept of a Universal Basic Income (UBI) has gained attention as a potential solution to economic instability, job displacement due to automation, and poverty. Supporters argue it could provide financial security and reduce inequality, while critics raise concerns about cost and disincentives to work. Should governments implement a UBI?",
+        "type": "Binary",
+        "options": [
+            "Yes",
+            "No"
+        ],
+        "tags": [
+            {
+                "name": "Economy",
+                "id": 2
+            },
+            {
+                "name": "Poverty",
+                "id": 20
+            },
+            {
+                "name": "Rights and Justice",
+                "id": 7
+            },
+            {
+                "name": "Society",
+                "id": 11
+            },
+            {
+                "name": "Law and Legislation",
+                "id": 13
+            }
+        ]
+    },
+    {
+        "title": "Factors Contributing to Climate Change",
+        "description": "Climate change results from a combination of factors, many of which are driven by human activities. Identifying the primary contributors is essential for directing mitigation efforts effectively. Which factor do you believe is the leading cause of climate change?",
+        "type": "Single Choice",
+        "options": [
+            "CO2 emissions",
+            "Deforestation",
+            "Use of fertilizers",
+            "Intensive livestock farming",
+            "Use of aerosols"
+        ],
+        "tags": [
+            {
+                "name": "Environment",
+                "id": 5
+            },
+            {
+                "name": "Natural Resources",
+                "id": 18
+            },
+            {
+                "name": "Crisis",
+                "id": 17
+            },
+            {
+                "name": "Innovation",
+                "id": 12
+            }
+        ]
+    },
+    {
+        "title": "Actions to Promote Gender Equality",
+        "description": "Despite progress, gender inequality persists in various forms worldwide, affecting economic growth, social justice, and human rights. Implementing effective actions to bridge the gender gap is crucial. Which measures do you think are most important to promote gender equality across societies?",
+        "type": "Multiple Choice",
+        "options": [
+            "Equal pay",
+            "Equal access to education",
+            "Work-life balance policies",
+            "Campaigns against gender violence",
+            "Promotion of women in leadership"
+        ],
+        "tags": [
+            {
+                "name": "Rights and Justice",
+                "id": 7
+            },
+            {
+                "name": "Work",
+                "id": 9
+            },
+            {
+                "name": "Education",
+                "id": 8
+            },
+            {
+                "name": "Society",
+                "id": 11
+            },
+            {
+                "name": "Law and Legislation",
+                "id": 13
+            },
+            {
+                "name": "Culture",
+                "id": 6
+            }
+        ],
+        "end_date": "2025-04-30"
+    },
+    {
+        "title": "Should Countries Develop Autonomous Weapons?",
+        "description": "The advancement of artificial intelligence has led to the possibility of autonomous weapons systems that can select and engage targets without human intervention. This raises ethical, legal, and security concerns. Should countries pursue the development of such weapons, or should there be international efforts to ban them?",
+        "type": "Binary",
+        "options": [
+            "Yes",
+            "No"
+        ],
+        "tags": [
+            {
+                "name": "Technology",
+                "id": 4
+            },
+            {
+                "name": "Security",
+                "id": 10
+            },
+            {
+                "name": "Law and Legislation",
+                "id": 13
+            },
+            {
+                "name": "Conflict",
+                "id": 15
+            },
+            {
+                "name": "Geopolitics",
+                "id": 14
+            },
+            {
+                "name": "Ethics",
+                "id": 23
+            }
+        ]
+    },
+    {
+        "title": "Main Barriers to Accessing Clean Water",
+        "description": "Access to clean and safe water is a fundamental human right, yet millions lack this basic necessity. Various factors, including environmental and socio-political issues, contribute to this problem. Identifying the most significant barriers can help target interventions effectively. What do you consider the main obstacle to accessing clean water?",
+        "type": "Single Choice",
+        "options": [
+            "Poor infrastructure",
+            "Pollution",
+            "Droughts",
+            "Political conflicts",
+            "Poverty"
+        ],
+        "tags": [
+            {
+                "name": "Health",
+                "id": 3
+            },
+            {
+                "name": "Environment",
+                "id": 5
+            },
+            {
+                "name": "Natural Resources",
+                "id": 18
+            },
+            {
+                "name": "Poverty",
+                "id": 20
+            },
+            {
+                "name": "Society",
+                "id": 11
+            }
+        ]
+    },
+    {
+        "title": "Strategies to Combat World Hunger",
+        "description": "World hunger remains one of the most pressing global issues, exacerbated by conflicts, climate change, and economic instability. Implementing effective strategies is crucial to eradicate hunger and achieve food security. Which actions do you believe are most effective in combating world hunger?",
+        "type": "Multiple Choice",
+        "options": [
+            "Improving sustainable agriculture",
+            "Equitable food distribution",
+            "Reducing food waste",
+            "Supporting small farmers",
+            "International aid programs"
+        ],
+        "tags": [
+            {
+                "name": "Poverty",
+                "id": 20
+            },
+            {
+                "name": "Health",
+                "id": 3
+            },
+            {
+                "name": "Economy",
+                "id": 2
+            },
+            {
+                "name": "Society",
+                "id": 11
+            },
+            {
+                "name": "Natural Resources",
+                "id": 18
+            },
+            {
+                "name": "Trade",
+                "id": 21
+            }
+        ],
+        "end_date": "2025-06-15"
+    },
+    {
+        "title": "Is Nuclear Energy Beneficial as a Clean Alternative?",
+        "description": "Nuclear energy offers a low-carbon power source that could help meet global energy demands without increasing greenhouse gas emissions. However, concerns about radioactive waste, nuclear accidents, and high costs persist. Should nuclear energy be embraced as a key component of a clean energy future?",
+        "type": "Binary",
+        "options": [
+            "Yes",
+            "No"
+        ],
+        "tags": [
+            {
+                "name": "Energy",
+                "id": 22
+            },
+            {
+                "name": "Environment",
+                "id": 5
+            },
+            {
+                "name": "Technology",
+                "id": 4
+            },
+            {
+                "name": "Innovation",
+                "id": 12
+            },
+            {
+                "name": "Security",
+                "id": 10
+            }
+        ]
+    },
+    {
+        "title": "Main Causes of Global Deforestation",
+        "description": "Deforestation contributes to climate change, loss of biodiversity, and disruption of water cycles. Human activities are the primary drivers behind the loss of forests worldwide. Identifying the leading cause is vital for implementing targeted interventions. Which activity do you think is the main cause of global deforestation?",
+        "type": "Single Choice",
+        "options": [
+            "Intensive agriculture",
+            "Logging",
+            "Mining",
+            "Urban expansion",
+            "Livestock farming"
+        ],
+        "tags": [
+            {
+                "name": "Environment",
+                "id": 5
+            },
+            {
+                "name": "Natural Resources",
+                "id": 18
+            },
+            {
+                "name": "Economy",
+                "id": 2
+            },
+            {
+                "name": "Crisis",
+                "id": 17
+            },
+            {
+                "name": "Trade",
+                "id": 21
+            }
+        ]
+    },
+    {
+        "title": "Initiatives to Improve Global Mental Health",
+        "description": "Mental health issues are on the rise globally, impacting individuals, families, and economies. Stigma and lack of resources often prevent people from seeking help. What initiatives should be prioritized to enhance mental health support and awareness worldwide?",
+        "type": "Multiple Choice",
+        "options": [
+            "Greater access to mental health services",
+            "Awareness campaigns",
+            "Reducing stigma",
+            "Integration into public health plans",
+            "Support in work and educational settings"
+        ],
+        "tags": [
+            {
+                "name": "Health",
+                "id": 3
+            },
+            {
+                "name": "Education",
+                "id": 8
+            },
+            {
+                "name": "Society",
+                "id": 11
+            },
+            {
+                "name": "Work",
+                "id": 9
+            },
+            {
+                "name": "Culture",
+                "id": 6
+            }
+        ]
+    },
+    {
+        "title": "Should the Use of Personal Data by Tech Companies be Regulated?",
+        "description": "In the digital age, personal data has become a valuable commodity, often collected and used by tech companies in ways that users may not fully understand. Concerns over privacy, consent, and data breaches have sparked debates on regulation. Should governments impose stricter regulations on how companies collect and use personal data?",
+        "type": "Binary",
+        "options": [
+            "Yes",
+            "No"
+        ],
+        "tags": [
+            {
+                "name": "Technology",
+                "id": 4
+            },
+            {
+                "name": "Law and Legislation",
+                "id": 13
+            },
+            {
+                "name": "Rights and Justice",
+                "id": 7
+            },
+            {
+                "name": "Cybersecurity",
+                "id": 19
+            },
+            {
+                "name": "Privacy",
+                "id": 24
+            }
+        ]
+    },
+    {
+        "title": "Factors Hindering Universal Access to Education",
+        "description": "Education is key to personal and societal development, yet many barriers prevent universal access. From economic challenges to social inequalities, understanding these factors is essential for creating effective policies. Which factor do you believe most significantly hinders access to education globally?",
+        "type": "Single Choice",
+        "options": [
+            "Poverty",
+            "Lack of infrastructure",
+            "Armed conflicts",
+            "Gender discrimination",
+            "Geographical distances"
+        ],
+        "tags": [
+            {
+                "name": "Education",
+                "id": 8
+            },
+            {
+                "name": "Poverty",
+                "id": 20
+            },
+            {
+                "name": "Rights and Justice",
+                "id": 7
+            },
+            {
+                "name": "Society",
+                "id": 11
+            }
+        ],
+        "end_date": "2025-05-31"
+    },
+    {
+        "title": "Measures to Preserve the Oceans",
+        "description": "Oceans are vital to life on Earth, regulating climate and supporting biodiversity. However, they face threats from pollution, overfishing, and climate change. Implementing measures to protect ocean health is critical. Which actions do you think are most important for preserving our oceans?",
+        "type": "Multiple Choice",
+        "options": [
+            "Creation of marine protected areas",
+            "Fishing regulation",
+            "Reduction of pollutant emissions",
+            "Plastic waste clean-up",
+            "Ocean research and monitoring"
+        ],
+        "tags": [
+            {
+                "name": "Environment",
+                "id": 5
+            },
+            {
+                "name": "Natural Resources",
+                "id": 18
+            },
+            {
+                "name": "Crisis",
+                "id": 17
+            }
+        ]
+    },
+    {
+        "title": "Is the Use of Artificial Intelligence in Medical Decisions Ethical?",
+        "description": "Artificial intelligence has the potential to revolutionize healthcare by improving diagnostics and treatment plans. However, reliance on AI raises ethical concerns regarding accountability, bias, and the doctor-patient relationship. Should AI be used in making medical decisions, and under what guidelines?",
+        "type": "Binary",
+        "options": [
+            "Yes",
+            "No"
+        ],
+        "tags": [
+            {
+                "name": "Technology",
+                "id": 4
+            },
+            {
+                "name": "Health",
+                "id": 3
+            },
+            {
+                "name": "Ethics",
+                "id": 23
+            },
+            {
+                "name": "Law and Legislation",
+                "id": 13
+            }
+        ],
+        "end_date": "2025-08-01"
+    },
+    {
+        "title": "Main Threats to Human Rights Today",
+        "description": "Human rights are under threat in various parts of the world due to different factors such as authoritarian regimes, discrimination, and terrorism. Identifying the most significant threats is essential for global efforts to protect and promote human rights. Which issue do you believe poses the greatest threat to human rights today?",
+        "type": "Single Choice",
+        "options": [
+            "Authoritarianism",
+            "Racial discrimination",
+            "Gender-based violence",
+            "Extreme poverty",
+            "Terrorism"
+        ],
+        "tags": [
+            {
+                "name": "Rights and Justice",
+                "id": 7
+            },
+            {
+                "name": "Society",
+                "id": 11
+            },
+            {
+                "name": "Politics",
+                "id": 1
+            },
+            {
+                "name": "Conflict",
+                "id": 15
+            },
+            {
+                "name": "Law and Legislation",
+                "id": 13
+            }
+        ]
+    },
+    {
+        "title": "Actions to Address Climate Change at an Individual Level",
+        "description": "While governments and corporations play significant roles in combating climate change, individual actions collectively can make a substantial impact. What steps can individuals take to contribute effectively to the fight against climate change?",
+        "type": "Multiple Choice",
+        "options": [
+            "Reduce energy consumption",
+            "Use sustainable transportation",
+            "Adopt a plant-based diet",
+            "Reduce and recycle waste",
+            "Support sustainable products and companies"
+        ],
+        "tags": [
+            {
+                "name": "Environment",
+                "id": 5
+            },
+            {
+                "name": "Society",
+                "id": 11
+            },
+            {
+                "name": "Education",
+                "id": 8
+            },
+            {
+                "name": "Innovation",
+                "id": 12
+            }
+        ]
+    }
+]

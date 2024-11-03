@@ -12,6 +12,7 @@ from api.public.poll.models import (
     PollType,
     PollStatus,
     PollOption,
+    PollOptionRead,
     VoteRequest,
     PollResults,
     PollOptionResult,
@@ -24,6 +25,7 @@ from api.public.poll.models import (
     ReactionType
 )
 from api.public.user.models import User
+from api.public.tag.models import Tag
 
 def generate_slug(title: str, db: Session) -> str:
     slug_base = slugify(title)
@@ -35,16 +37,17 @@ def generate_slug(title: str, db: Session) -> str:
         counter += 1
     return slug
 
-def get_all_polls(db: Session, current_user: Optional[User]) -> list[PollRead]:
-    polls = db.exec(
-        select(Poll)
-        .options(
-            joinedload(Poll.creator),
-            selectinload(Poll.options),
-            selectinload(Poll.reactions),
-            selectinload(Poll.comments),
-        )
-    ).all()
+def get_all_polls(tags: Optional[list[str]], db: Session, current_user: Optional[User]) -> list[PollRead]:
+    query = select(Poll).options(
+        joinedload(Poll.creator),
+        selectinload(Poll.options),
+        selectinload(Poll.reactions),
+        selectinload(Poll.comments).joinedload(PollComment.user),
+        selectinload(Poll.tags)
+    )
+    if tags:
+        query = query.where(Poll.tags.any(Tag.name.in_(tags)))
+    polls = db.exec(query).all()
     poll_reads = []
     if current_user:
         poll_ids = [poll.id for poll in polls]
@@ -69,13 +72,153 @@ def get_all_polls(db: Session, current_user: Optional[User]) -> list[PollRead]:
         user_voted_option_ids = votes_by_poll.get(poll.id, [])
         user_reaction_type = reactions_by_poll.get(poll.id)
         comments_count = len(poll.comments) if poll.comments else 0
-        poll_read = PollRead.model_validate(poll)
-        poll_read.likes_count = likes
-        poll_read.dislikes_count = dislikes
-        poll_read.user_voted_options = user_voted_option_ids
-        poll_read.user_reaction_type = user_reaction_type
-        poll_read.comments_count = comments_count
-        poll_reads.append(poll_read)
+
+        comments = [
+            CommentRead(
+                id=comment.id,
+                poll_id=comment.poll_id,
+                user_id=comment.user_id,
+                username=comment.user.username if comment.user else "Unknown",
+                content=comment.content,
+                created_at=comment.created_at
+            )
+            for comment in poll.comments
+        ]
+
+        try:
+            tags = [tag.name for tag in poll.tags]
+
+            poll_dict = {
+                "id": poll.id,
+                "slug": poll.slug,
+                "title": poll.title,
+                "description": poll.description,
+                "poll_type": poll.poll_type,
+                "is_anonymous": poll.is_anonymous,
+                "status": poll.status,
+                "created_at": poll.created_at,
+                "updated_at": poll.updated_at,
+                "ends_at": poll.ends_at,
+                "tags": tags,
+                "creator_id": poll.creator_id,
+                "creator_username": poll.creator.username if poll.creator else "",
+                "community_id": poll.community_id,
+                "options": [
+                    PollOptionRead(
+                        id=option.id,
+                        poll_id=option.poll_id,
+                        text=option.text,
+                        votes=option.votes
+                    ) for option in poll.options
+                ],
+                "likes_count": likes,
+                "dislikes_count": dislikes,
+                "user_voted_options": user_voted_option_ids,
+                "user_reaction_type": user_reaction_type,
+                "comments_count": comments_count,
+                "comments": comments
+            }
+
+            poll_read = PollRead.model_validate(poll_dict)
+            poll_reads.append(poll_read)
+            
+        except Exception as e:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Error al procesar la encuesta con ID {poll.id}: {str(e)}"
+            )
+    
+    return poll_reads
+
+def get_polls_by_community(community_id: int, tags: Optional[list[str]], db: Session, current_user: Optional[User]) -> list[PollRead]:
+    query = select(Poll).options(
+        joinedload(Poll.creator),
+        selectinload(Poll.options),
+        selectinload(Poll.reactions),
+        selectinload(Poll.comments),
+        selectinload(Poll.tags)
+    ).where(Poll.community_id == community_id)
+    if tags:
+        query = query.where(Poll.tags.any(Tag.name.in_(tags)))
+    polls = db.exec(query).all()
+    poll_reads = []
+    if current_user:
+        poll_ids = [poll.id for poll in polls]
+        user_votes = db.exec(
+            select(Vote)
+            .where(Vote.poll_id.in_(poll_ids), Vote.user_id == current_user.id)
+        ).all()
+        votes_by_poll = {}
+        for vote in user_votes:
+            votes_by_poll.setdefault(vote.poll_id, []).append(vote.option_id)
+        user_reactions = db.exec(
+            select(PollReaction)
+            .where(PollReaction.poll_id.in_(poll_ids), PollReaction.user_id == current_user.id)
+        ).all()
+        reactions_by_poll = {reaction.poll_id: reaction.reaction_type for reaction in user_reactions}
+    else:
+        votes_by_poll = {}
+        reactions_by_poll = {}
+    
+    for poll in polls:
+        likes = sum(1 for reaction in poll.reactions if reaction.reaction_type == ReactionType.LIKE)
+        dislikes = sum(1 for reaction in poll.reactions if reaction.reaction_type == ReactionType.DISLIKE)
+        user_voted_option_ids = votes_by_poll.get(poll.id, [])
+        user_reaction_type = reactions_by_poll.get(poll.id)
+        comments_count = len(poll.comments) if poll.comments else 0
+
+        comments = [
+            CommentRead(
+                id=comment.id,
+                poll_id=comment.poll_id,
+                user_id=comment.user_id,
+                username=comment.user.username if comment.user else "Unknown",
+                content=comment.content,
+                created_at=comment.created_at
+            )
+            for comment in poll.comments
+        ]
+        
+        try:
+            tags = [tag.name for tag in poll.tags]
+            poll_dict = {
+                "id": poll.id,
+                "slug": poll.slug,
+                "title": poll.title,
+                "description": poll.description,
+                "poll_type": poll.poll_type,
+                "is_anonymous": poll.is_anonymous,
+                "status": poll.status,
+                "created_at": poll.created_at,
+                "updated_at": poll.updated_at,
+                "ends_at": poll.ends_at,
+                "tags": tags,
+                "creator_id": poll.creator_id,
+                "creator_username": poll.creator.username if poll.creator else "",
+                "community_id": poll.community_id,
+                "options": [
+                    PollOptionRead(
+                        id=option.id,
+                        poll_id=option.poll_id,
+                        text=option.text,
+                        votes=option.votes
+                    ) for option in poll.options
+                ],
+                "likes_count": likes,
+                "dislikes_count": dislikes,
+                "user_voted_options": user_voted_option_ids,
+                "user_reaction_type": user_reaction_type,
+                "comments_count": comments_count,
+                "comments": comments
+            }
+            poll_read = PollRead.model_validate(poll_dict)
+            poll_reads.append(poll_read)
+        except Exception as e:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Error al procesar la encuesta con ID {poll.id}: {str(e)}"
+            )
+    
     return poll_reads
 
 def get_poll(slug: str, db: Session) -> PollRead:
@@ -87,42 +230,8 @@ def get_poll(slug: str, db: Session) -> PollRead:
     if not poll:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Poll not found")
     db.refresh(poll)
-    username = poll.creator.username if poll.creator else "Unknown"
-    return PollRead.model_validate(poll, username)
-
-def get_polls_by_community(community_id: int, db: Session, current_user: Optional[User]) -> list[PollRead]:
-    polls = db.exec(
-        select(Poll)
-        .options(
-            joinedload(Poll.creator),
-            selectinload(Poll.options),
-            selectinload(Poll.reactions),
-            selectinload(Poll.comments),
-        )
-        .where(Poll.community_id == community_id)
-    ).all()
-    poll_reads = []
-    if current_user:
-        poll_ids = [poll.id for poll in polls]
-        user_votes = db.exec(
-            select(Vote)
-            .where(Vote.poll_id.in_(poll_ids), Vote.user_id == current_user.id)
-        ).all()
-        votes_by_poll = {}
-        for vote in user_votes:
-            votes_by_poll.setdefault(vote.poll_id, []).append(vote.option_id)
-    else:
-        votes_by_poll = {}
-    for poll in polls:
-        likes = sum(1 for reaction in poll.reactions if reaction.reaction_type == ReactionType.LIKE)
-        dislikes = sum(1 for reaction in poll.reactions if reaction.reaction_type == ReactionType.DISLIKE)
-        user_voted_option_ids = votes_by_poll.get(poll.id, [])
-        poll_read = PollRead.model_validate(poll)
-        poll_read.likes_count = likes
-        poll_read.dislikes_count = dislikes
-        poll_read.user_voted_options = user_voted_option_ids
-        poll_reads.append(poll_read)
-    return poll_reads
+    # username = poll.creator.username if poll.creator else "Unknown"
+    return []
 
 def create_poll(poll: PollCreate, db: Session, current_user: User) -> Poll:
     print('poll')
@@ -131,6 +240,7 @@ def create_poll(poll: PollCreate, db: Session, current_user: User) -> Poll:
     slug = generate_slug(poll.title, db)
     print('slug')
     print(slug)
+    
     db_poll = Poll(
         title=poll.title,
         slug=slug,
@@ -145,14 +255,30 @@ def create_poll(poll: PollCreate, db: Session, current_user: User) -> Poll:
     print('db_poll')
     print(db_poll)
 
-    # Crear las opciones de la encuesta
+    # Create the poll options
     if len(poll.options) < 2:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="At least two options are required")
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Se requieren al menos dos opciones")
+    
     db_options = []
     for option_text in poll.options:
         db_option = PollOption(text=option_text)
         db_options.append(db_option)
     db_poll.options = db_options
+
+    if poll.tags:
+        existing_tags = db.exec(
+            select(Tag).where(Tag.name.in_(poll.tags))
+        ).all()
+        
+        # Verify if all the sent tags exist
+        missing_tags = set(poll.tags) - {tag.name for tag in existing_tags}
+        if missing_tags:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"The following tags do not exist: {', '.join(missing_tags)}"
+            )
+        
+        db_poll.tags = existing_tags
 
     db.add(db_poll)
     db.commit()

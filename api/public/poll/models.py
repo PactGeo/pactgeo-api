@@ -121,6 +121,15 @@ class PollOptionRead(SQLModel):
     votes: int
     model_config = ConfigDict(from_attributes=True)
 
+class CommentRead(SQLModel):
+    id: int
+    poll_id: int
+    user_id: int
+    username: str
+    content: str
+    created_at: datetime
+    model_config = ConfigDict(from_attributes=True)
+
 class PollRead(SQLModel):
     id: int
     slug: str
@@ -142,7 +151,35 @@ class PollRead(SQLModel):
     user_voted_options: list[int] = []
     user_reaction_type: Optional[ReactionType] = None
     comments_count: int
+    comments: list[CommentRead] = []
+
     model_config = ConfigDict(from_attributes=True)
+
+    @classmethod
+    def from_poll(cls, poll: "Poll") -> "PollRead":
+        return cls(
+            id=poll.id,
+            slug=poll.slug,
+            title=poll.title,
+            description=poll.description,
+            poll_type=poll.poll_type,
+            is_anonymous=poll.is_anonymous,
+            status=poll.status,
+            created_at=poll.created_at,
+            updated_at=poll.updated_at,
+            ends_at=poll.ends_at,
+            tags=[tag.name for tag in poll.tags],
+            creator_id=poll.creator_id,
+            creator_username=poll.creator.username if poll.creator else "Unknown",
+            community_id=poll.community_id,
+            options=[PollOptionRead.from_option(option) for option in poll.options],
+            likes_count=poll.likes_count,
+            dislikes_count=poll.dislikes_count,
+            user_voted_options=[],
+            user_reaction_type=None,
+            comments_count=poll.comments_count,
+            comments=[CommentRead.from_comment(comment) for comment in poll.comments]
+        )
 
 class VoteRequest(SQLModel):
     option_ids: list[int]
@@ -188,15 +225,6 @@ class PollComment(SQLModel, table=True):
 
 class CommentCreate(SQLModel):
     content: str
-
-class CommentRead(SQLModel):
-    id: int
-    poll_id: int
-    user_id: int
-    username: str
-    content: str
-    created_at: datetime
-    model_config = ConfigDict(from_attributes=True)
 
 class ReactionRequest(SQLModel):
     reaction_type: ReactionType
