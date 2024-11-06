@@ -7,7 +7,8 @@ from sqlmodel import SQLModel, Field, Relationship
 from sqlalchemy import Column, Enum as SQLAlchemyEnum, UniqueConstraint
 from pydantic import ConfigDict
 from api.public.tag.models import Tag
-from api.utils.generic_models import PollTagLink
+from api.utils.generic_models import PollTagLink, PollCommunityLink
+from api.public.community.models import CommunityRead
 
 # Enums
 class PollType(str, Enum):
@@ -31,12 +32,13 @@ class PollBase(SQLModel):
     poll_type: PollType
     is_anonymous: bool = True
     ends_at: Optional[datetime] = None
+    community_type: Optional[str] = Field(default=None)
+
 
 class Poll(PollBase, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     slug: str = Field(index=True, unique=True)
     creator_id: int = Field(foreign_key="users.id")
-    community_id: int = Field(foreign_key="community.id")
     status: PollStatus = Field(
         default=PollStatus.ACTIVE,
         sa_column=Column(
@@ -47,9 +49,9 @@ class Poll(PollBase, table=True):
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 
+    communities: list["Community"] = Relationship(back_populates="polls", link_model=PollCommunityLink)
     tags: list[Tag] = Relationship(back_populates="polls", link_model=PollTagLink)
     creator: Optional["User"] = Relationship(back_populates="polls")
-    community: Optional["Community"] = Relationship(back_populates="polls")
     options: list["PollOption"] = Relationship(back_populates="poll")
     votes: list["Vote"] = Relationship(back_populates="poll")
     reactions: list["PollReaction"] = Relationship(back_populates="poll")
@@ -78,10 +80,11 @@ class PollCreate(PollBase):
     poll_type: PollType
     is_anonymous: bool = True
     ends_at: Optional[datetime] = None
-    community_id: int
     status: PollStatus = PollStatus.ACTIVE
     options: list[str]
     tags: list[str] = []
+    community_type: Optional[str] = None
+    community_ids: list[int]
 class PollOption(SQLModel, table=True):
     __tablename__ = "poll_options"
     id: Optional[int] = Field(default=None, primary_key=True)
@@ -130,7 +133,7 @@ class CommentRead(SQLModel):
     created_at: datetime
     model_config = ConfigDict(from_attributes=True)
 
-class PollRead(SQLModel):
+class PollRead(PollBase):
     id: int
     slug: str
     title: str
@@ -144,7 +147,7 @@ class PollRead(SQLModel):
     tags: list[str] = []
     creator_id: int
     creator_username: str
-    community_id: int
+    communities: list[CommunityRead] = []
     options: list[PollOptionRead]
     likes_count: int
     dislikes_count: int
@@ -152,6 +155,7 @@ class PollRead(SQLModel):
     user_reaction_type: Optional[ReactionType] = None
     comments_count: int
     comments: list[CommentRead] = []
+    community_ids: list[int] = []
 
     model_config = ConfigDict(from_attributes=True)
 
@@ -171,14 +175,16 @@ class PollRead(SQLModel):
             tags=[tag.name for tag in poll.tags],
             creator_id=poll.creator_id,
             creator_username=poll.creator.username if poll.creator else "Unknown",
-            community_id=poll.community_id,
-            options=[PollOptionRead.from_option(option) for option in poll.options],
+            communities=[CommunityRead.model_validate(community) for community in poll.communities],
+            community_ids=[community.id for community in poll.communities],
+            community_type=poll.community_type,
+            options=[PollOptionRead.model_validate(option) for option in poll.options],
             likes_count=poll.likes_count,
             dislikes_count=poll.dislikes_count,
             user_voted_options=[],
             user_reaction_type=None,
             comments_count=poll.comments_count,
-            comments=[CommentRead.from_comment(comment) for comment in poll.comments]
+            comments=[CommentRead.model_validate(comment) for comment in poll.comments]
         )
 
 class VoteRequest(SQLModel):

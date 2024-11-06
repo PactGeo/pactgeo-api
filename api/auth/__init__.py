@@ -11,7 +11,7 @@ from api.database import get_session
 
 SECRET_KEY = settings.JWT_SECRET
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 60
+ACCESS_TOKEN_EXPIRE_MINUTES = 10080
 
 def create_access_token(data: dict):
     to_encode = data.copy()

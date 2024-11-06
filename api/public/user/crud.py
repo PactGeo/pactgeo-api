@@ -26,6 +26,9 @@ def create_user(user: UserCreate, db: Session):
     db.refresh(db_user)
     return db_user
 
+def get_me(db: Session, current_user: User) -> User:
+    return current_user
+
 def get_user_by_id(user_id: int, db: Session) -> User:
     user = db.get(User, user_id)
     if not user:

@@ -16,8 +16,8 @@ class Subnation(SQLModel, table=True):
     famous_landmark: Optional[str] = Field(default=None, description="Famous landmark in the subnation")
 
     country_id: Optional[int] = Field(default=None, foreign_key="country.id", description="Foreign key to the parent country")
-
     country: Optional["Country"] = Relationship(back_populates="subnations")
+
     debates: list["Debate"] = Relationship(back_populates="subnations_involved", link_model=DebateSubnationInvolvedLink)
     subdivisions: list["Subdivision"] = Relationship(back_populates="subnation")
     points_of_view: list["PointOfView"] = Relationship(back_populates="subnation")

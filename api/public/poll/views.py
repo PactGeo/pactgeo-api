@@ -1,4 +1,4 @@
-from typing import Optional, List
+from typing import Optional
 from fastapi import APIRouter, Depends, Query, status
 from sqlmodel import Session
 from api.public.poll.crud import (
@@ -31,9 +31,10 @@ from api.public.user.models import User
 
 router = APIRouter()
 
-@router.get("/", response_model=List[PollRead])
+@router.get("/", response_model=list[PollRead])
 def read_polls(
     community_id: Optional[int] = Query(None, description="ID of the community to filter polls"),
+    community_type: Optional[str] = Query(None, description="Type of community to filter polls"),
     tags: Optional[list[str]] = Query(None, description="List of tags to filter polls"),
     db: Session = Depends(get_session),
     current_user: Optional[User] = Depends(get_optional_current_user)
@@ -45,7 +46,7 @@ def read_polls(
             db,
             current_user
         )
-    return get_all_polls(tags, db, current_user)
+    return get_all_polls(tags, community_type, db, current_user)
 
 @router.get("/{poll_id}", response_model=PollRead)
 def read_poll(poll_id: int, db: Session = Depends(get_session)):
@@ -109,7 +110,7 @@ def add_comment(
 ):
     return add_comment_to_poll(poll_id, comment_request, db, current_user)
 
-@router.get("/{poll_id}/comments", response_model=List[CommentRead])
+@router.get("/{poll_id}/comments", response_model=list[CommentRead])
 def read_comments(
     poll_id: int,
     db: Session = Depends(get_session)

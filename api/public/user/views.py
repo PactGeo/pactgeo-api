@@ -1,14 +1,21 @@
+from typing import Optional
 from fastapi import APIRouter, Depends, status
 from sqlmodel import Session
 from api.public.user.crud import create_user, get_user_by_username, update_user, delete_user
-from api.public.user.models import UserCreate, UserRead, UserUpdate
+from api.public.user.models import User, UserCreate, UserRead, UserUpdate
 from api.database import get_session
+from api.public.dependencies import get_optional_current_user
 
 router = APIRouter()
 
 @router.post("/", response_model=UserRead, status_code=status.HTTP_201_CREATED)
 def create(user: UserCreate, db: Session = Depends(get_session)):
     return create_user(user, db)
+
+@router.get("/me", response_model=UserRead)
+def read_me(db: Session = Depends(get_session), current_user: Optional[User] = Depends(get_optional_current_user)):
+    return current_user
+    # return get_me(db, current_user)
 
 @router.get("/{username}", response_model=UserRead)
 def read_by_username(username: str, db: Session = Depends(get_session)):

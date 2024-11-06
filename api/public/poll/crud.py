@@ -26,6 +26,7 @@ from api.public.poll.models import (
 )
 from api.public.user.models import User
 from api.public.tag.models import Tag
+from api.public.community.models import Community, CommunityRead
 
 def generate_slug(title: str, db: Session) -> str:
     slug_base = slugify(title)
@@ -37,16 +38,20 @@ def generate_slug(title: str, db: Session) -> str:
         counter += 1
     return slug
 
-def get_all_polls(tags: Optional[list[str]], db: Session, current_user: Optional[User]) -> list[PollRead]:
+def get_all_polls(tags: Optional[list[str]], community_type: Optional[str], db: Session, current_user: Optional[User]) -> list[PollRead]:
     query = select(Poll).options(
         joinedload(Poll.creator),
         selectinload(Poll.options),
         selectinload(Poll.reactions),
         selectinload(Poll.comments).joinedload(PollComment.user),
-        selectinload(Poll.tags)
+        selectinload(Poll.tags),
+        selectinload(Poll.communities)
     )
     if tags:
         query = query.where(Poll.tags.any(Tag.name.in_(tags)))
+    if community_type:
+        community_type_condition = Poll.community_type == community_type.upper()
+        query = query.where(community_type_condition)
     polls = db.exec(query).all()
     poll_reads = []
     if current_user:
@@ -72,6 +77,16 @@ def get_all_polls(tags: Optional[list[str]], db: Session, current_user: Optional
         user_voted_option_ids = votes_by_poll.get(poll.id, [])
         user_reaction_type = reactions_by_poll.get(poll.id)
         comments_count = len(poll.comments) if poll.comments else 0
+
+        communities = [
+            CommunityRead(
+                id=community.id,
+                name=community.name,
+                level=community.level,
+                parent_id=community.parent_id
+            )
+            for community in poll.communities
+        ]
 
         comments = [
             CommentRead(
@@ -102,7 +117,8 @@ def get_all_polls(tags: Optional[list[str]], db: Session, current_user: Optional
                 "tags": tags,
                 "creator_id": poll.creator_id,
                 "creator_username": poll.creator.username if poll.creator else "",
-                "community_id": poll.community_id,
+                "communities": communities,
+                "community_type": poll.community_type,
                 "options": [
                     PollOptionRead(
                         id=option.id,
@@ -131,13 +147,15 @@ def get_all_polls(tags: Optional[list[str]], db: Session, current_user: Optional
     return poll_reads
 
 def get_polls_by_community(community_id: int, tags: Optional[list[str]], db: Session, current_user: Optional[User]) -> list[PollRead]:
+    print('==get_polls_by_community==')
     query = select(Poll).options(
         joinedload(Poll.creator),
         selectinload(Poll.options),
         selectinload(Poll.reactions),
-        selectinload(Poll.comments),
-        selectinload(Poll.tags)
-    ).where(Poll.community_id == community_id)
+        selectinload(Poll.comments).joinedload(PollComment.user),
+        selectinload(Poll.tags),
+        selectinload(Poll.communities)
+    ).where(Poll.communities.any(Community.id == community_id))
     if tags:
         query = query.where(Poll.tags.any(Tag.name.in_(tags)))
     polls = db.exec(query).all()
@@ -166,6 +184,16 @@ def get_polls_by_community(community_id: int, tags: Optional[list[str]], db: Ses
         user_voted_option_ids = votes_by_poll.get(poll.id, [])
         user_reaction_type = reactions_by_poll.get(poll.id)
         comments_count = len(poll.comments) if poll.comments else 0
+
+        communities = [
+            CommunityRead(
+                id=community.id,
+                name=community.name,
+                level=community.level,
+                parent_id=community.parent_id
+            )
+            for community in poll.communities
+        ]
 
         comments = [
             CommentRead(
@@ -195,7 +223,7 @@ def get_polls_by_community(community_id: int, tags: Optional[list[str]], db: Ses
                 "tags": tags,
                 "creator_id": poll.creator_id,
                 "creator_username": poll.creator.username if poll.creator else "",
-                "community_id": poll.community_id,
+                "communities": communities,
                 "options": [
                     PollOptionRead(
                         id=option.id,
@@ -234,27 +262,18 @@ def get_poll(slug: str, db: Session) -> PollRead:
     return []
 
 def create_poll(poll: PollCreate, db: Session, current_user: User) -> Poll:
-    print('poll')
-    print(poll)
-    print('hola')
-    slug = generate_slug(poll.title, db)
-    print('slug')
-    print(slug)
-    
+    print('@@@ create_poll @@@')
     db_poll = Poll(
         title=poll.title,
-        slug=slug,
         description=poll.description,
         poll_type=poll.poll_type,
+        community_type=poll.community_type,
         is_anonymous=poll.is_anonymous,
         ends_at=poll.ends_at,
         status=poll.status,
-        community_id=poll.community_id,
         creator_id=current_user.id,
+        slug=generate_slug(poll.title, db),
     )
-    print('db_poll')
-    print(db_poll)
-
     # Create the poll options
     if len(poll.options) < 2:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Se requieren al menos dos opciones")
@@ -279,12 +298,17 @@ def create_poll(poll: PollCreate, db: Session, current_user: User) -> Poll:
             )
         
         db_poll.tags = existing_tags
+    
+    communities = db.exec(select(Community).where(Community.id.in_(poll.community_ids))).all()
+    if not communities:
+        raise HTTPException(status_code=400, detail="Invalid community IDs")
+    db_poll.communities = communities
 
     db.add(db_poll)
     db.commit()
     db.refresh(db_poll)
 
-    return db_poll
+    return PollRead.from_poll(db_poll)
 
 def update_poll(
     poll_id: int,

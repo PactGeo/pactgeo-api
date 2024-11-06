@@ -14,7 +14,6 @@ class Country(SQLModel, table=True):
     cca2: Optional[str] = Field(default=None, index=True, description="ISO alpha-2 country code")
     cca3: Optional[str] = Field(default=None, index=True, description="ISO alpha-3 country code")
     coat_of_arms_svg: Optional[str] = Field(default=None, description="URL to SVG image of the coat of arms")
-    continent: Optional[str] = Field(default=None, description="Continent the country belongs to")
     currency_code: Optional[str] = Field(default=None, description="ISO code of the currency")
     currency_name: Optional[str] = Field(default=None, description="Name of the currency")
     flag: Optional[str] = Field(default=None, description="Emoji representing the country flag")

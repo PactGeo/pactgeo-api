@@ -484,7 +484,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/ai.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "XCD": {
@@ -606,7 +606,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/ag.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "XCD": {
@@ -686,7 +686,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/ar.svg"
     },
     "continents": [
-      "South America"
+      "America"
     ],
     "currencies": {
       "ARS": {
@@ -737,7 +737,7 @@
     "population": 45376763,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "South America",
+    "subregion": "America",
     "timezones": [
       "UTC-03:00"
     ],
@@ -843,7 +843,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/aw.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "AWG": {
@@ -1164,7 +1164,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/bs.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "BSD": {
@@ -1391,7 +1391,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/bb.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "BBD": {
@@ -1642,7 +1642,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/bz.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "BZD": {
@@ -1804,7 +1804,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/bm.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "BMD": {
@@ -1849,7 +1849,7 @@
     "population": 63903,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "North America",
+    "subregion": "America",
     "timezones": [
       "UTC-04:00"
     ],
@@ -1964,7 +1964,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/bo.svg"
     },
     "continents": [
-      "South America"
+      "America"
     ],
     "currencies": {
       "BOB": {
@@ -2025,7 +2025,7 @@
     "population": 11673029,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "South America",
+    "subregion": "America",
     "timezones": [
       "UTC-04:00"
     ],
@@ -2290,7 +2290,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/br.svg"
     },
     "continents": [
-      "South America"
+      "America"
     ],
     "currencies": {
       "BRL": {
@@ -2336,7 +2336,7 @@
     "population": 212559409,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "South America",
+    "subregion": "America",
     "timezones": [
       "UTC-05:00",
       "UTC-04:00",
@@ -2435,7 +2435,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/vg.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "USD": {
@@ -3002,7 +3002,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/ca.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "CAD": {
@@ -3053,7 +3053,7 @@
     "population": 38005238,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "North America",
+    "subregion": "America",
     "timezones": [
       "UTC-08:00",
       "UTC-07:00",
@@ -3158,7 +3158,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/bq.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "USD": {
@@ -3237,7 +3237,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/ky.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "KYD": {
@@ -3486,7 +3486,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/cl.svg"
     },
     "continents": [
-      "South America"
+      "America"
     ],
     "currencies": {
       "CLP": {
@@ -3532,7 +3532,7 @@
     "population": 19116209,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "South America",
+    "subregion": "America",
     "timezones": [
       "UTC-06:00",
       "UTC-04:00"
@@ -3803,7 +3803,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/co.svg"
     },
     "continents": [
-      "South America"
+      "America"
     ],
     "currencies": {
       "COP": {
@@ -3849,7 +3849,7 @@
     "population": 50882884,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "South America",
+    "subregion": "America",
     "timezones": [
       "UTC-05:00"
     ],
@@ -4044,7 +4044,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/cr.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "CRC": {
@@ -4197,7 +4197,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/cu.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "CUC": {
@@ -4274,7 +4274,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/cw.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "ANG": {
@@ -4786,7 +4786,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/dm.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "XCD": {
@@ -4862,7 +4862,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/do.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "DOP": {
@@ -4941,7 +4941,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/ec.svg"
     },
     "continents": [
-      "South America"
+      "America"
     ],
     "currencies": {
       "USD": {
@@ -4987,7 +4987,7 @@
     "population": 17643060,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "South America",
+    "subregion": "America",
     "timezones": [
       "UTC-06:00",
       "UTC-05:00"
@@ -5099,7 +5099,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/sv.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "USD": {
@@ -5588,7 +5588,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/fk.svg"
     },
     "continents": [
-      "South America"
+      "America"
     ],
     "currencies": {
       "FKP": {
@@ -5633,7 +5633,7 @@
     "population": 2563,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "South America",
+    "subregion": "America",
     "timezones": [
       "UTC-04:00"
     ],
@@ -6007,7 +6007,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/gf.svg"
     },
     "continents": [
-      "South America"
+      "America"
     ],
     "currencies": {
       "EUR": {
@@ -6052,7 +6052,7 @@
     "population": 254541,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "South America",
+    "subregion": "America",
     "timezones": [
       "UTC-03:00"
     ],
@@ -6773,7 +6773,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/gl.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "DKK": {
@@ -6818,7 +6818,7 @@
     "population": 56367,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "North America",
+    "subregion": "America",
     "timezones": [
       "UTC-04:00",
       "UTC-03:00",
@@ -6848,7 +6848,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/gd.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "XCD": {
@@ -6921,7 +6921,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/gp.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "EUR": {
@@ -7081,7 +7081,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/gt.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "GTQ": {
@@ -7408,7 +7408,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/gy.svg"
     },
     "continents": [
-      "South America"
+      "America"
     ],
     "currencies": {
       "GYD": {
@@ -7454,7 +7454,7 @@
     "population": 786559,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "South America",
+    "subregion": "America",
     "timezones": [
       "UTC-04:00"
     ],
@@ -7484,7 +7484,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/ht.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "HTG": {
@@ -7617,7 +7617,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/hn.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "HNL": {
@@ -8679,7 +8679,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/jm.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "JMD": {
@@ -10850,7 +10850,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/mq.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "EUR": {
@@ -11158,7 +11158,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/mx.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "MXN": {
@@ -11204,7 +11204,7 @@
     "population": 128932753,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "North America",
+    "subregion": "America",
     "timezones": [
       "UTC-08:00",
       "UTC-07:00",
@@ -11618,7 +11618,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/ms.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "XCD": {
@@ -12453,7 +12453,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/ni.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "NIO": {
@@ -13491,7 +13491,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/pa.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "PAB": {
@@ -13659,7 +13659,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/py.svg"
     },
     "continents": [
-      "South America"
+      "America"
     ],
     "currencies": {
       "PYG": {
@@ -13710,7 +13710,7 @@
     "population": 7132530,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "South America",
+    "subregion": "America",
     "timezones": [
       "UTC-04:00"
     ],
@@ -13744,7 +13744,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/pe.svg"
     },
     "continents": [
-      "South America"
+      "America"
     ],
     "currencies": {
       "PEN": {
@@ -13800,7 +13800,7 @@
     "population": 32971846,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "South America",
+    "subregion": "America",
     "timezones": [
       "UTC-05:00"
     ],
@@ -14130,7 +14130,7 @@
     "ccn3": "630",
     "coatOfArms": {},
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "USD": {
@@ -14711,7 +14711,7 @@
     "ccn3": "652",
     "coatOfArms": {},
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "EUR": {
@@ -14858,7 +14858,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/kn.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "XCD": {
@@ -14931,7 +14931,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/lc.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "XCD": {
@@ -15004,7 +15004,7 @@
     "ccn3": "663",
     "coatOfArms": {},
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "EUR": {
@@ -15074,7 +15074,7 @@
     "ccn3": "666",
     "coatOfArms": {},
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "EUR": {
@@ -15119,7 +15119,7 @@
     "population": 6069,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "North America",
+    "subregion": "America",
     "timezones": [
       "UTC-03:00"
     ],
@@ -15146,7 +15146,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/vc.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "XCD": {
@@ -15870,7 +15870,7 @@
     "ccn3": "534",
     "coatOfArms": {},
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "ANG": {
@@ -16885,7 +16885,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/sr.svg"
     },
     "continents": [
-      "South America"
+      "America"
     ],
     "currencies": {
       "SRD": {
@@ -16931,7 +16931,7 @@
     "population": 586634,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "South America",
+    "subregion": "America",
     "timezones": [
       "UTC-03:00"
     ],
@@ -17992,7 +17992,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/tt.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "TTD": {
@@ -18307,7 +18307,7 @@
     "ccn3": "796",
     "coatOfArms": {},
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "USD": {
@@ -18795,7 +18795,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/us.svg"
     },
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "USD": {
@@ -19157,7 +19157,7 @@
     "population": 329484123,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "North America",
+    "subregion": "America",
     "timezones": [
       "UTC-12:00",
       "UTC-11:00",
@@ -19231,7 +19231,7 @@
     "population": 300,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "North America",
+    "subregion": "America",
     "timezones": [
       "UTC-11:00",
       "UTC-10:00",
@@ -19257,7 +19257,7 @@
     "ccn3": "850",
     "coatOfArms": {},
     "continents": [
-      "North America"
+      "America"
     ],
     "currencies": {
       "USD": {
@@ -19333,7 +19333,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/uy.svg"
     },
     "continents": [
-      "South America"
+      "America"
     ],
     "currencies": {
       "UYU": {
@@ -19379,7 +19379,7 @@
     "population": 3473727,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "South America",
+    "subregion": "America",
     "timezones": [
       "UTC-03:00"
     ],
@@ -19661,7 +19661,7 @@
       "svg": "https://mainfacts.com/media/images/coats_of_arms/ve.svg"
     },
     "continents": [
-      "South America"
+      "America"
     ],
     "currencies": {
       "VES": {
@@ -19707,7 +19707,7 @@
     "population": 28435943,
     "region": "Americas",
     "status": "officially-assigned",
-    "subregion": "South America",
+    "subregion": "America",
     "timezones": [
       "UTC-04:00"
     ],

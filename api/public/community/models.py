@@ -1,11 +1,20 @@
 from typing import Optional
+from enum import Enum
 from sqlmodel import Field, Relationship, SQLModel
-from api.utils.generic_models import UserCommunityLink
+from api.utils.generic_models import UserCommunityLink, PollCommunityLink
+
+class CommunityLevel(str, Enum):
+    GLOBAL = 'GLOBAL'
+    CONTINENT = 'CONTINENT'
+    NATIONAL = 'NATIONAL'
+    SUBNATIONAL = 'SUBNATIONAL'
+    LOCAL = 'LOCAL'
 
 class CommunityBase(SQLModel):
     name: str
-    type: str
+    level: CommunityLevel = Field(default=CommunityLevel.GLOBAL)
     description: Optional[str] = None
+
     parent_id: Optional[int] = Field(default=None, foreign_key="community.id")
 
 class Community(CommunityBase, table=True):
@@ -27,7 +36,8 @@ class Community(CommunityBase, table=True):
     )
 
     polls: list["Poll"] = Relationship(
-        back_populates="community"
+        back_populates="communities",
+        link_model=PollCommunityLink
     )
 
 class CommunityCreate(CommunityBase):
