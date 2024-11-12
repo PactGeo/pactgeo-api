@@ -9,6 +9,7 @@ logger = logger_config(__name__)
 
 origins = [
     "http://localhost:5173/",  # Cambia esto al dominio de tu frontend
+    "https://geounity.org/",
 ]
 
 def create_app(settings: Settings):

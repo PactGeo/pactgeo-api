@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/geounity_db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="railway@autorack.proxy.rlwy.net" uuid="142f2245-644f-433f-a1d4-4ad3a6fb0acb">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://autorack.proxy.rlwy.net:44931/railway</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
