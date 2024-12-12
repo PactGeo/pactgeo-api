@@ -8,7 +8,7 @@ from api.utils.logger import logger_config
 logger = logger_config(__name__)
 
 origins = [
-    "http://localhost:5173/",  # Cambia esto al dominio de tu frontend
+    "http://localhost:5173/",
     "https://geounity.org/",
 ]
 

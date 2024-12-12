@@ -277,7 +277,6 @@ def create_poll(poll: PollCreate, db: Session, current_user: User) -> Poll:
     # Create the poll options
     if len(poll.options) < 2:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Se requieren al menos dos opciones")
-    
     db_options = []
     for option_text in poll.options:
         db_option = PollOption(text=option_text)

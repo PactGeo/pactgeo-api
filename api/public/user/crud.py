@@ -1,7 +1,7 @@
 from sqlmodel import Session, select
 from fastapi import HTTPException, status
 from passlib.context import CryptContext
-from api.public.user.models import User, UserCreate, UserUpdate
+from api.public.user.models import User, UserCreate, UserUpdate, UserReadWithCounts
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
@@ -37,14 +37,17 @@ def get_user_by_id(user_id: int, db: Session) -> User:
         )
     return user
 
-def get_user_by_username(username: str, db: Session) -> User:
+def get_user_by_username(username: str, db: Session) -> UserReadWithCounts:
     statement = select(User).where(User.username == username)
     user = db.exec(statement).first()
     if not user:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND, detail="User not found"
         )
-    return user
+    followers_count = len(user.followers)
+    following_count = len(user.following)
+
+    return UserReadWithCounts(**user.__dict__, followers_count=followers_count, following_count=following_count)
 
 def update_user(user_id: int, user_update: UserUpdate, db: Session) -> User:
     user = db.get(User, user_id)
