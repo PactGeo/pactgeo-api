@@ -14,15 +14,15 @@ class UserRole(str, Enum):
 class UserBase(SQLModel):
     username: Optional[str] = Field(default=None, max_length=50, unique=True)
     email: str = Field(max_length=100, unique=True)
-    name: Optional[str] = Field(default=None, max_length=100)
+    name: Optional[str] = Field(default=None, max_length=50)
     emailVerified: Optional[datetime] = None
     banner: Optional[str] = None
     image: Optional[str] = None
     birthdate: Optional[datetime] = None
     gender: Optional[str] = Field(default=None, max_length=20)
-    bio: Optional[str] = Field(default=None, max_length=500)
-    location: Optional[str] = Field(default=None, max_length=100)
-    website: Optional[str] = None
+    bio: Optional[str] = Field(default=None, max_length=240)
+    location: Optional[str] = Field(default=None, max_length=40)
+    website: Optional[str] = Field(default=None, max_length=100)
     isActive: Optional[bool] = None
     role: Optional[UserRole] = None
     country_id: Optional[int] = Field(default=None, foreign_key="country.id")
@@ -107,7 +107,23 @@ class UserPublic(SQLModel):
     model_config = ConfigDict(from_attributes=True)
 
 class UserUpdate(UserBase):
+    username: Optional[str] = None
+    email: Optional[str] = None
+    name: Optional[str] = None
+    emailVerified: Optional[datetime] = None
+    banner: Optional[str] = None
     image: Optional[str] = Field(None, max_length=100)
+    birthdate: Optional[datetime] = None
+    gender: Optional[str] = None
+    bio: Optional[str] = None
+    location: Optional[str] = None
+    website: Optional[str] = None
+    isActive: Optional[bool] = None
+    role: Optional[UserRole] = None
+    country_id: Optional[int] = None
+    created_at: Optional[datetime] = None
+    updated_at: Optional[datetime] = None
+
 
 class Accounts(SQLModel, table=True):
     __tablename__ = "accounts"

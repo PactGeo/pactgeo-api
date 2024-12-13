@@ -18,6 +18,20 @@ def read_me(db: Session = Depends(get_session), current_user: Optional[User] = D
     return current_user
     # return get_me(db, current_user)
 
+@router.patch("/me", response_model=UserRead)
+def update_me(
+    user_update: UserUpdate,
+    db: Session = Depends(get_session),
+    current_user: User = Depends(get_optional_current_user)
+):
+    if not current_user:
+        raise HTTPException(
+            status_code=401,
+            detail="Not authenticated"
+        )
+    return update_user(current_user.id, user_update, db)
+
+
 @router.get("/{username}", response_model=UserReadWithCounts)
 def read_by_username(username: str, db: Session = Depends(get_session)):
     return get_user_by_username(username, db)
