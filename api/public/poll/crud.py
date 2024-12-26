@@ -38,7 +38,7 @@ def generate_slug(title: str, db: Session) -> str:
         counter += 1
     return slug
 
-def get_all_polls(tags: Optional[list[str]], community_type: Optional[str], db: Session, current_user: Optional[User]) -> list[PollRead]:
+def get_all_polls(tags: Optional[list[str]], scope: Optional[str], db: Session, current_user: Optional[User]) -> list[PollRead]:
     query = select(Poll).options(
         joinedload(Poll.creator),
         selectinload(Poll.options),
@@ -49,9 +49,9 @@ def get_all_polls(tags: Optional[list[str]], community_type: Optional[str], db: 
     )
     if tags:
         query = query.where(Poll.tags.any(Tag.name.in_(tags)))
-    if community_type:
-        community_type_condition = Poll.community_type == community_type.upper()
-        query = query.where(community_type_condition)
+    if scope:
+        scope_condition = Poll.scope == scope.upper()
+        query = query.where(scope_condition)
     polls = db.exec(query).all()
     poll_reads = []
     if current_user:
@@ -118,7 +118,7 @@ def get_all_polls(tags: Optional[list[str]], community_type: Optional[str], db: 
                 "creator_id": poll.creator_id,
                 "creator_username": poll.creator.username if poll.creator else "",
                 "communities": communities,
-                "community_type": poll.community_type,
+                "scope": poll.scope,
                 "options": [
                     PollOptionRead(
                         id=option.id,
@@ -267,7 +267,7 @@ def create_poll(poll: PollCreate, db: Session, current_user: User) -> Poll:
         title=poll.title,
         description=poll.description,
         poll_type=poll.poll_type,
-        community_type=poll.community_type,
+        scope=poll.scope,
         is_anonymous=poll.is_anonymous,
         ends_at=poll.ends_at,
         status=poll.status,

@@ -175,12 +175,12 @@ def upgrade() -> None:
     op.create_index(op.f('ix_debate_slug'), 'debate', ['slug'], unique=True)
     op.create_index(op.f('ix_debate_title'), 'debate', ['title'], unique=False)
     op.create_table('poll',
-    sa.Column('title', sqlmodel.sql.sqltypes.AutoString(), nullable=False),
+    sa.Column('title', sqlmodel.sql.sqltypes.AutoString(length=100), nullable=False),
     sa.Column('description', sqlmodel.sql.sqltypes.AutoString(), nullable=True),
     sa.Column('poll_type', sa.Enum('BINARY', 'SINGLE_CHOICE', 'MULTIPLE_CHOICE', name='polltype'), nullable=False),
     sa.Column('is_anonymous', sa.Boolean(), nullable=False),
     sa.Column('ends_at', sa.DateTime(), nullable=True),
-    sa.Column('community_type', sqlmodel.sql.sqltypes.AutoString(), nullable=True),
+    sa.Column('scope', sqlmodel.sql.sqltypes.AutoString(), nullable=True),
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('slug', sqlmodel.sql.sqltypes.AutoString(), nullable=False),
     sa.Column('creator_id', sa.Integer(), nullable=False),
@@ -277,9 +277,9 @@ def upgrade() -> None:
     op.create_table('poll_options',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('text', sqlmodel.sql.sqltypes.AutoString(), nullable=False),
-    sa.Column('votes', sa.Integer(), nullable=False),
+    sa.Column('votes', sa.Integer(), nullable=False, default=0),
     sa.Column('poll_id', sa.Integer(), nullable=False),
-    sa.ForeignKeyConstraint(['poll_id'], ['poll.id'], ),
+    sa.ForeignKeyConstraint(['poll_id'], ['poll.id'], ondelete='CASCADE'),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('poll_reactions',

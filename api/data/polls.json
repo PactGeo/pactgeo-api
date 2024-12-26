@@ -1,5 +1,120 @@
 [
     {
+        "title": "How Should AI Be Regulated to Prevent Ethical Risks?",
+        "description": "The rapid development of artificial intelligence brings both opportunities and risks, including ethical dilemmas, job displacement, and privacy concerns. What strategies should governments and organizations implement to regulate AI responsibly?",
+        "type": "Multiple Choice",
+        "options": [
+            "Implement AI ethics committees",
+            "Enforce transparency requirements",
+            "Ban high-risk applications",
+            "Promote AI education",
+            "Create global AI policies"
+        ],
+        "tags": [
+            {"name": "Technology", "id": 4},
+            {"name": "Ethics", "id": 23},
+            {"name": "Law and Legislation", "id": 13},
+            {"name": "Innovation", "id": 12}
+        ],
+        "end_date": "2025-09-01",
+        "importance_level": "High",
+        "region_focus": "Global",
+        "created_by": "Research Organization",
+        "is_trending": true,
+        "updated_at": "2024-06-15"
+    },
+    {
+        "title": "Should Governments Promote Water Conservation Policies?",
+        "description": "With water scarcity affecting millions globally, implementing effective water conservation policies is essential. Should governments prioritize investments in water management systems, regulations on water use, and awareness campaigns?",
+        "type": "Binary",
+        "options": ["Yes", "No"],
+        "tags": [
+            {"name": "Natural Resources", "id": 18},
+            {"name": "Environment", "id": 5},
+            {"name": "Crisis", "id": 17},
+            {"name": "Sustainability", "id": 30}
+        ],
+        "end_date": "2025-03-15",
+        "importance_level": "High",
+        "region_focus": "Global",
+        "created_by": "Community",
+        "is_trending": false,
+        "updated_at": "2024-06-15"
+    },
+    {
+        "title": "What is the Most Effective Action to Address the Refugee Crisis?",
+        "description": "Millions of refugees worldwide are displaced due to conflicts, climate disasters, and persecution. Which approach do you think is the most effective in addressing the challenges refugees face?",
+        "type": "Single Choice",
+        "options": [
+            "Increase humanitarian aid",
+            "Strengthen international asylum laws",
+            "Promote conflict resolution",
+            "Support integration programs",
+            "Address climate migration"
+        ],
+        "tags": [
+            {"name": "Migration", "id": 16},
+            {"name": "Conflict", "id": 15},
+            {"name": "Rights and Justice", "id": 7},
+            {"name": "Crisis", "id": 17}
+        ],
+        "end_date": "2025-02-28",
+        "importance_level": "High",
+        "region_focus": "Global",
+        "created_by": "Research Organization",
+        "is_trending": true,
+        "updated_at": "2024-06-15"
+    },
+    {
+        "title": "Key Strategies to Tackle Youth Unemployment",
+        "description": "Youth unemployment remains a critical issue, affecting economic stability and social development worldwide. What strategies should governments implement to create employment opportunities for young people?",
+        "type": "Multiple Choice",
+        "options": [
+            "Promote vocational training",
+            "Increase access to higher education",
+            "Subsidize small businesses",
+            "Offer entrepreneurship programs",
+            "Invest in digital skills development"
+        ],
+        "tags": [
+            {"name": "Work", "id": 9},
+            {"name": "Education", "id": 8},
+            {"name": "Economy", "id": 2},
+            {"name": "Society", "id": 11}
+        ],
+        "end_date": "2025-06-30",
+        "importance_level": "Medium",
+        "region_focus": "Regional",
+        "created_by": "Admin",
+        "is_trending": false,
+        "updated_at": "2024-06-15"
+    },
+    {
+        "title": "How Can We Combat the Global Plastic Waste Crisis?",
+        "description": "Plastic pollution has become one of the largest environmental challenges, affecting oceans, ecosystems, and human health. Which solutions should be prioritized to address this crisis effectively?",
+        "type": "Multiple Choice",
+        "options": [
+            "Ban single-use plastics",
+            "Develop biodegradable alternatives",
+            "Promote recycling infrastructure",
+            "Increase public awareness",
+            "Encourage corporate responsibility"
+        ],
+        "tags": [
+            {"name": "Environment", "id": 5},
+            {"name": "Natural Resources", "id": 18},
+            {"name": "Crisis", "id": 17},
+            {"name": "Innovation", "id": 12}
+        ],
+        "end_date": "2025-04-15",
+        "importance_level": "High",
+        "region_focus": "Global",
+        "created_by": "Community",
+        "is_trending": true,
+        "updated_at": "2024-06-15"
+    },
+    
+    {
         "title": "Should Investment in Renewable Energy be Prioritized?",
         "description": "Climate change poses an unprecedented threat to our planet, affecting ecosystems, economies, and communities worldwide. As fossil fuel reserves dwindle and environmental concerns escalate, the debate intensifies: Should nations prioritize significant investments in renewable energy sources like solar, wind, and hydroelectric power to combat climate change and secure a sustainable future for coming generations?",
         "type": "Binary",

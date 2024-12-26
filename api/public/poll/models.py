@@ -27,12 +27,12 @@ class ReactionType(str, Enum):
 
 # Base Models
 class PollBase(SQLModel):
-    title: str
+    title: str = Field(max_length=100, index=True)
     description: Optional[str] = None
     poll_type: PollType
     is_anonymous: bool = True
     ends_at: Optional[datetime] = None
-    community_type: Optional[str] = Field(default=None)
+    scope: Optional[str] = Field(default=None)
 
 
 class Poll(PollBase, table=True):
@@ -52,7 +52,7 @@ class Poll(PollBase, table=True):
     communities: list["Community"] = Relationship(back_populates="polls", link_model=PollCommunityLink)
     tags: list[Tag] = Relationship(back_populates="polls", link_model=PollTagLink)
     creator: Optional["User"] = Relationship(back_populates="polls")
-    options: list["PollOption"] = Relationship(back_populates="poll")
+    options: list["PollOption"] = Relationship(back_populates="poll", cascade_delete=True)
     votes: list["Vote"] = Relationship(back_populates="poll")
     reactions: list["PollReaction"] = Relationship(back_populates="poll")
     comments: list["PollComment"] = Relationship(back_populates="poll")
@@ -83,7 +83,7 @@ class PollCreate(PollBase):
     status: PollStatus = PollStatus.ACTIVE
     options: list[str]
     tags: list[str] = []
-    community_type: Optional[str] = None
+    scope: Optional[str] = None
     community_ids: list[int]
 class PollOption(SQLModel, table=True):
     __tablename__ = "poll_options"
@@ -177,7 +177,7 @@ class PollRead(PollBase):
             creator_username=poll.creator.username if poll.creator else "Unknown",
             communities=[CommunityRead.model_validate(community) for community in poll.communities],
             community_ids=[community.id for community in poll.communities],
-            community_type=poll.community_type,
+            scope=poll.scope,
             options=[PollOptionRead.model_validate(option) for option in poll.options],
             likes_count=poll.likes_count,
             dislikes_count=poll.dislikes_count,
