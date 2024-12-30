@@ -43,6 +43,11 @@ class User(UserBase, table=True):
     poll_votes: list["Vote"] = Relationship(back_populates="user")
     poll_reactions: list["PollReaction"] = Relationship(back_populates="user")
     poll_comments: list["PollComment"] = Relationship(back_populates="user")
+    reports: list["Report"] = Relationship(
+        back_populates="user",  # Relación bidireccional
+        sa_relationship_kwargs={"cascade": "all, delete-orphan"}
+    )
+
 
     created_at: datetime = Field(default_factory=datetime.utcnow, index=True, nullable=True)
     updated_at: Optional[datetime] = Field(default=None)

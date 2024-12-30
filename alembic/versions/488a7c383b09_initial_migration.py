@@ -317,6 +317,17 @@ def upgrade() -> None:
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
+    op.create_table('report',
+        sa.Column('id', sa.Integer(), nullable=False),
+        sa.Column('content_type', sa.String(length=50), nullable=False),
+        sa.Column('content_id', sa.Integer(), nullable=False),
+        sa.Column('reason', sa.String(length=100), nullable=False),
+        sa.Column('description', sa.String(length=500), nullable=True),
+        sa.Column('user_id', sa.Integer(), nullable=False),
+        sa.Column('created_at', sa.DateTime(), nullable=False),
+        sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
+        sa.PrimaryKeyConstraint('id')
+    )
     op.create_table('votes',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('poll_id', sa.Integer(), nullable=False),
@@ -381,4 +392,5 @@ def downgrade() -> None:
     op.drop_table('tag')
     op.drop_table('globalcommunity')
     op.drop_table('community')
+    op.drop_table('report')
     # ### end Alembic commands ###

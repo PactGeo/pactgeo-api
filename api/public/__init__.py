@@ -10,6 +10,7 @@ from api.public.subnation import views as subnations
 from api.public.cloudinary import views as cloudinary
 from api.public.poll import views as polls
 from api.public.opinion import views as opinions
+from api.public.report import views as reports
 from api.public.dependencies import JWTBearer, get_current_user
 
 api = APIRouter()
@@ -63,4 +64,9 @@ api.include_router(
     opinions.router,
     prefix="/opinions",
     tags=["Opinions"],
+)
+api.include_router(
+    reports.router,
+    prefix="/reports",
+    tags=["Reports"],
 )
