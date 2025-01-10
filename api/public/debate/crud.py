@@ -1,5 +1,6 @@
 import json
 from datetime import datetime
+from sqlalchemy.orm import joinedload, selectinload
 from slugify import slugify
 from sqlmodel import Session, select
 from fastapi import HTTPException, status
@@ -8,7 +9,6 @@ from api.public.country.models import Country
 from api.public.user.models import User
 from api.public.tag.models import Tag
 from api.public.point_of_view.models import PointOfView, Opinion, OpinionCreate
-from sqlalchemy.orm import joinedload, selectinload
 
 def generate_slug(title: str, db: Session) -> str:
     slug_base = slugify(title)
